@@ -2,7 +2,7 @@
     "id": "be2461e2-5b7a-4d33-a19d-d822079aee2d",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "objCollision",
+    "name": "obj_collision",
     "eventList": [
         
     ],

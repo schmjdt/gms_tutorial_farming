@@ -1,3 +1,7 @@
-/// @description Insert description here
+/// @description player initialization
 
-spd = 3;
+spd_slow = 1;
+spd_norm = 2;
+spd_fast = 3;
+
+spd = spd_norm;

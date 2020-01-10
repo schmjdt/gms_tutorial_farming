@@ -1,26 +1,33 @@
-/// @description Insert description here
+/// @description movement
 
-// if we press a button, move the player
-if(keyboard_check(vk_left)) 
-{
-	// move the player left
-	x -= 2;
+// INPUT -> INTENDED MOVEMENT -> (FUTURE) COLLISION CHECK -> APPLY MOVEMENT
+
+// --- UPDATE INPUT
+input_left	= keyboard_check(vk_left);
+input_right = keyboard_check(vk_right);
+input_up	= keyboard_check(vk_up);
+input_down	= keyboard_check(vk_down);
+
+// --- RESET MOVE VARIABLES
+moveX = 0;
+moveY = 0;
+
+// --- INTENDED MOVEMENT
+if(input_left) {
+	moveX = -spd;
 }
 
-if(keyboard_check(vk_right)) 
-{
-	// move the player right
-	x += 2;
+if(input_right) {
+	moveX = spd;
 }
 
-if(keyboard_check(vk_up)) 
-{
-	// move the player up
-	y -= 2;
+if(input_up) {
+	moveY = -spd;
 }
 
-if(keyboard_check(vk_down)) 
-{
-	// move the player down
-	y += 2;
+if(input_down) {
+	moveY = spd;
 }
+
+x += moveX;
+y += moveY;

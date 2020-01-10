@@ -29,5 +29,35 @@ if (moveX == 0) {
 	moveY = (input_down - input_up) * spd;
 }
 
+// --- COLLISION CHECK
+if (moveX != 0) {
+	if (place_meeting(x + moveX, y, objCollision)) {
+		repeat(abs(moveX)) {
+			if (!place_meeting(x + sign(moveX), y, objCollision)) {
+				x += sign(moveX);
+			} else {
+				break;
+			}
+		}
+		// Since manually moved above, set speed to 0
+		moveX = 0;	
+	}
+}
+
+if (moveY != 0) {
+	if (place_meeting(x, y + moveY, objCollision)) {
+		repeat(abs(moveY)) {
+			if (!place_meeting(x, y + sign(moveY), objCollision)) {
+				y += sign(moveY);
+			} else {
+				break;
+			}
+		}
+		// Since manually moved above, set speed to 0
+		moveY = 0;	
+	}
+}
+
+// --- APPLY MOVEMENT
 x += moveX;
 y += moveY;

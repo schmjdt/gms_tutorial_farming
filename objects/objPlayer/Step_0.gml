@@ -13,20 +13,11 @@ moveX = 0;
 moveY = 0;
 
 // --- INTENDED MOVEMENT
-if(input_left) {
-	moveX = -spd;
-}
-
-if(input_right) {
-	moveX = spd;
-}
-
-if(input_up) {
-	moveY = -spd;
-}
-
-if(input_down) {
-	moveY = spd;
+moveX = (input_right - input_left) * spd;
+// Remove diagonol movement
+if (moveX == 0) {
+	// Biased towards left/right
+	moveY = (input_down - input_up) * spd;
 }
 
 x += moveX;

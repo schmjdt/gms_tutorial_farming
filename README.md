@@ -5,12 +5,18 @@ Following along with [Farming RPG Tutorial: GMS2](https://www.youtube.com/playli
 
 
 Workflow >>>
-
+```
 *start new tutorial video*
+*create branch locally*
 git checkout -b ep#
-git push --set-upstream origin ep#
+*push branch to repo*
+git push --set-upstream origin ep# 
+
 *make changes/commits*
-    git push <each set of changes>
+git commit -m "change"
+git push
+*repeat above as many times as needed*
+
 *tutorial video complete - squash before merging to master*
 git checkout master
 git merge ep#
@@ -24,3 +30,4 @@ git rebase -i HEAD~#
     "Complete ep# of tutorial"
 >wq
 git push
+```

@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "11a5c143-00de-4f9f-aa0c-f7e0b0d3d20e",
+            "Value": {
+                "id": "ac98ceff-52ad-4640-9198-af059fc398cd",
+                "resourcePath": "objects\\obj_npc3\\obj_npc3.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1330b3db-727e-4355-8535-0e19c2561366",
             "Value": {
                 "id": "69bac986-def5-48ca-8688-fb9aca295d18",
@@ -215,6 +223,14 @@
             }
         },
         {
+            "Key": "748d4252-2fb0-4ea7-a2bd-af3d629b60c6",
+            "Value": {
+                "id": "7ede7bfb-d24e-46bf-9a22-2fce7aeff747",
+                "resourcePath": "objects\\obj_npc1\\obj_npc1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "76b9aab6-37c7-4551-8578-f45c83306eb1",
             "Value": {
                 "id": "c1765b4a-d09b-4b59-95df-f272406ed282",
@@ -292,6 +308,14 @@
                 "id": "d3008e44-14ad-4baa-b948-babe952c3983",
                 "resourcePath": "sprites\\spr_feet_female_longboots_brown\\spr_feet_female_longboots_brown.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
+            "Value": {
+                "id": "960df053-c71d-4272-b440-639b7adf8f44",
+                "resourcePath": "options\\linux\\options_linux.yy",
+                "resourceType": "GMLinuxOptions"
             }
         },
         {
@@ -447,6 +471,14 @@
             }
         },
         {
+            "Key": "de2b3f7b-521d-4aa2-aeb4-21f9c3c723aa",
+            "Value": {
+                "id": "387c874f-97a1-4745-b12b-1cfa3dbf5cec",
+                "resourcePath": "objects\\obj_npc2\\obj_npc2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ead6cb2b-ad15-4430-b997-108acd037762",
             "Value": {
                 "id": "6d922547-7335-4131-98f8-d3ce62f73151",
@@ -460,6 +492,14 @@
                 "id": "92fb01e7-22a9-43e3-b579-98517e73eded",
                 "resourcePath": "views\\f3377715-b499-49d4-854b-e2dc8af52fa5.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
+            "Value": {
+                "id": "4601185c-185f-418e-8ec6-b6d4fa27ae4e",
+                "resourcePath": "options\\mac\\options_mac.yy",
+                "resourceType": "GMMacOptions"
             }
         },
         {

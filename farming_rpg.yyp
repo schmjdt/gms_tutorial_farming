@@ -263,6 +263,14 @@
             }
         },
         {
+            "Key": "89e65df4-8a6b-4c22-8806-35a16cb40848",
+            "Value": {
+                "id": "1defaa3f-e4de-41e0-a0ce-7e008425bed8",
+                "resourcePath": "sprites\\spr_bg\\spr_bg.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8bbb933b-f190-4dd1-88a1-35f57d5c3b85",
             "Value": {
                 "id": "0172ffe1-7e08-4949-9940-a2efda3e57db",
@@ -348,6 +356,14 @@
                 "id": "f07a4115-5ac1-47f7-9502-4dd75e8645fa",
                 "resourcePath": "sprites\\spr_legs_female_pants_teal\\spr_legs_female_pants_teal.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ba8c7dd4-370a-425c-baef-d898b60b97df",
+            "Value": {
+                "id": "3d6f6e01-18ae-46d5-a690-941b1594d7dd",
+                "resourcePath": "objects\\camera\\camera.yy",
+                "resourceType": "GMObject"
             }
         },
         {

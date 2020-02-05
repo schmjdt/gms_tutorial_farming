@@ -1,0 +1,1 @@
+following = obj_player;

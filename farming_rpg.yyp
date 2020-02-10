@@ -607,6 +607,22 @@
             }
         },
         {
+            "Key": "fa1f714a-8f02-4a9c-aef2-0b197f939473",
+            "Value": {
+                "id": "eb1d0e7c-9639-4c56-9c21-b62416b55f99",
+                "resourcePath": "sprites\\spr_character_shadow\\spr_character_shadow.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fd63f8c7-fcd8-44d4-b3bb-77a8201592ce",
+            "Value": {
+                "id": "90655267-5743-4a46-aff6-5f7978e55727",
+                "resourcePath": "objects\\obj_parent_NPC\\obj_parent_NPC.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fd64ed19-b9c5-4078-987b-1234263fed53",
             "Value": {
                 "id": "6caf6789-26d9-4905-a140-6fdfe496d031",

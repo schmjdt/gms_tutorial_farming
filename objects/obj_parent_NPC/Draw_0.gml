@@ -22,6 +22,10 @@ if (x_frame  + (anim_speed / anim_fps) < anim_length) {
 	x_frame = 1;	
 }
 
+
+// --- DRAW CHARACTER : SHADOW
+draw_sprite(spr_character_shadow, 0, x, y);
+
 // --- DRAW CHARACTER : BASE
 draw_sprite_part(spr_base, 0, floor(x_frame) * frame_size, y_frame * frame_size, frame_size, frame_size, xx, yy);
 

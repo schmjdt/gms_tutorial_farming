@@ -1,4 +1,4 @@
-/// @description game camera
+obj/// @description game camera
 
 move_cam = keyboard_check(ord("C"));
 

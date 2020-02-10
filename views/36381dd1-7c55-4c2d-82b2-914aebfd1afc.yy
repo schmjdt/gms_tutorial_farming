@@ -8,7 +8,7 @@
         "f363b92c-3df1-4ea3-baa1-530e0f18f6d8"
     ],
     "filterType": "GMSprite",
-    "folderName": "Tiles",
+    "folderName": "Tile Sprites",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

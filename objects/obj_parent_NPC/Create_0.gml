@@ -6,7 +6,7 @@ spd_slow = 1;
 spd_norm = 2;
 spd_fast = 3;
 
-//spd = spd_norm;
+spd = spd_norm;
 
 // Character Sprites
 
@@ -17,6 +17,9 @@ frame_size = 64;
 
 x_frame = 1;
 y_frame = 10;
+
+moveX = 0;
+moveY = 0;
 
 // NOTE: mask defaulted to human npc
 x_offset = sprite_get_xoffset(mask_index)
@@ -29,3 +32,6 @@ spr_feet	= -1;
 spr_torso	= -1;
 spr_legs	= -1;
 spr_hair	= -1;
+
+// Start NPC movement right away after creation
+alarm[1] = 1;

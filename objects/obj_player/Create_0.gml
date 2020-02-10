@@ -21,6 +21,8 @@ y_frame = 10;
 x_offset = sprite_get_xoffset(mask_index)
 y_offset = sprite_get_yoffset(mask_index)
 
+spr_shadow  = spr_character_shadow
+
 // TODO: Add shaders for even more color choices
 spr_base	= spr_base_male_1
 spr_feet	= spr_feet_male_boots_black

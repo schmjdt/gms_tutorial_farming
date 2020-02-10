@@ -25,6 +25,7 @@ moveY = 0;
 x_offset = sprite_get_xoffset(mask_index)
 y_offset = sprite_get_yoffset(mask_index)
 
+spr_shadow  = spr_character_shadow
 
 // TODO: Add shaders for even more color choices
 spr_base	= -1;

@@ -29,7 +29,23 @@ if (moveX == 0) {
 	moveY = (input_down - input_up) * spd;
 }
 
+// --- GET FACING
+if (moveX != 0) {
+	switch(sign(moveX)) {
+		case 1: facing = dir.right; break;
+		case -1: facing = dir.left; break;
+	}
+} else if (moveY != 0) {
+	switch(sign(moveY)) {
+		case 1: facing = dir.down; break;
+		case -1: facing = dir.up; break;
+	}
+} else {
+	facing = -1;
+}
+
 // --- COLLISION CHECK
+// -   HORIZONTAL
 if (moveX != 0) {
 	if (place_meeting(x + moveX, y, obj_collision)) {
 		repeat(abs(moveX)) {
@@ -44,6 +60,7 @@ if (moveX != 0) {
 	}
 }
 
+// -   VERTICAL
 if (moveY != 0) {
 	if (place_meeting(x, y + moveY, obj_collision)) {
 		repeat(abs(moveY)) {
@@ -55,6 +72,20 @@ if (moveY != 0) {
 		}
 		// Since manually moved above, set speed to 0
 		moveY = 0;	
+	}
+}
+
+// -    OBJECTS
+var inst = instance_place(x, y, obj_transition);
+if (inst != noone and facing == inst.player_facing_before) {
+	with (game) {
+		if (! do_transition) {
+			spawn_room = inst.target_room;
+			spawn_x = inst.target_x;
+			spawn_y = inst.target_y;
+			spawn_player_facing = inst.player_facing_after;
+			do_transition = true;
+		}
 	}
 }
 

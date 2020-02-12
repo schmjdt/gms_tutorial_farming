@@ -1,15 +1,11 @@
 /// @description character sprite layers
 
-if (moveX < 0) {
-	y_frame = 9;
-} else if (moveX > 0) {
-	y_frame = 11;
-} else if (moveY < 0) {
-	y_frame = 8;
-} else if (moveY > 0) {
-	y_frame = 10;
-} else {
-	x_frame = 0
+switch (facing) {	
+	case dir.left:	y_frame = 9;  break;
+	case dir.right: y_frame = 11; break;
+	case dir.up:	y_frame = 8;  break;
+	case dir.down:	y_frame = 10; break;
+	case -1:		x_frame = 0;  break;
 }
 
 var xx = x - x_offset;

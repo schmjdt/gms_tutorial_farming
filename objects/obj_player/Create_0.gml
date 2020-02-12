@@ -8,6 +8,8 @@ spd_fast = 3;
 
 //spd = spd_norm;
 
+facing = -1;
+
 // Character Sprites
 
 anim_length = 9;

@@ -39,6 +39,3 @@ if (spr_torso != -1) draw_sprite_part(spr_torso, 0, floor(x_frame) * frame_size,
 
 // --- DRAW CHARACTER : HAIR  
 if (spr_hair != -1)  draw_sprite_part(spr_hair, 0, floor(x_frame) * frame_size, y_frame * frame_size, frame_size, frame_size, xx, yy);
-
-
-draw_rectangle_color(bbox_left, bbox_top, bbox_right, bbox_bottom, c_yellow, c_yellow, c_yellow, c_yellow, true)

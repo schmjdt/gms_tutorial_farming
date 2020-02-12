@@ -1,6 +1,6 @@
 
 {
-    "name": "rm_1",
+    "name": "rm_farm",
     "id": "8bbb933b-f190-4dd1-88a1-35f57d5c3b85",
     "creationCodeFile": "",
     "inheritCode": false,

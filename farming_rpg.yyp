@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "169578f9-1907-423f-a051-5397ae1472b8",
+            "Value": {
+                "id": "7258f779-aa1c-4af7-93e5-32760fd68722",
+                "resourcePath": "objects\\game\\game.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1841adcf-2d6a-4222-8c52-315c1f26a48c",
             "Value": {
                 "id": "15450ca5-8f87-4ea4-8cf2-0370fa9fa7f9",
@@ -146,7 +154,7 @@
             "Key": "21ea7643-55ad-4e38-9509-ee8d9b7b9138",
             "Value": {
                 "id": "c7daf326-89f3-4d71-96e5-6453db9bdda2",
-                "resourcePath": "rooms\\room1\\room1.yy",
+                "resourcePath": "rooms\\rm_0\\rm_0.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -338,7 +346,7 @@
             "Key": "8bbb933b-f190-4dd1-88a1-35f57d5c3b85",
             "Value": {
                 "id": "0172ffe1-7e08-4949-9940-a2efda3e57db",
-                "resourcePath": "rooms\\rm_0\\rm_0.yy",
+                "resourcePath": "rooms\\rm_1\\rm_1.yy",
                 "resourceType": "GMRoom"
             }
         },

@@ -30,6 +30,7 @@ if (moveX == 0) {
 }
 
 // --- COLLISION CHECK
+// -   HORIZONTAL
 if (moveX != 0) {
 	if (place_meeting(x + moveX, y, obj_collision)) {
 		repeat(abs(moveX)) {
@@ -44,6 +45,7 @@ if (moveX != 0) {
 	}
 }
 
+// -   VERTICAL
 if (moveY != 0) {
 	if (place_meeting(x, y + moveY, obj_collision)) {
 		repeat(abs(moveY)) {
@@ -56,6 +58,12 @@ if (moveY != 0) {
 		// Since manually moved above, set speed to 0
 		moveY = 0;	
 	}
+}
+
+// -    OBJECTS
+var inst = instance_place(x, y, obj_transition);
+if (inst != noone) {
+	room_goto(inst.target_room);
 }
 
 // --- APPLY MOVEMENT

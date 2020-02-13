@@ -64,8 +64,12 @@ if (moveY != 0) {
 var inst = instance_place(x, y, obj_transition);
 if (inst != noone) {
 	with (game) {
-		spawn_room = inst.target_room;
-		do_transition = true;
+		if (! do_transition) {
+			spawn_room = inst.target_room;
+			spawn_x = inst.target_x;
+			spawn_y = inst.target_y;
+			do_transition = true;
+		}
 	}
 }
 

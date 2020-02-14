@@ -5,6 +5,7 @@ if (!planting) {
 }
 
 var cs = cell_size;
+
 // Get closest grid position
 var xx = (mx div cs);
 var yy = (my div cs);

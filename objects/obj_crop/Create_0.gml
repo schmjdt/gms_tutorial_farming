@@ -13,5 +13,7 @@ max_growth_stage = (sprite_get_width(spr_crops) / frame_width) - 1
 fully_grown = false;
 sparkle = false;
 
+// Adjust instance creation point. 
+// Formula based upon sprite sheet pixel locations
 xx = x - (frame_width / 2) + 2;
 yy = y - (frame_height) + 6;

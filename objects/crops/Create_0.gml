@@ -1,5 +1,11 @@
 /// @description 
 
+planting = false;
+select_crop = 0;
+
+mx = 0;
+my = 0;
+
 ds_crops_types = 0;
 
 // TODO: Pull from XML ??

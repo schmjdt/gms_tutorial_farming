@@ -5,5 +5,5 @@ draw_sprite_part(
 	growth_stage * frame_width, 
 	crop_type * frame_height,
 	frame_width, frame_height,
-	x, y
+	xx, yy
 );

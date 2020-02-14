@@ -287,6 +287,14 @@
             }
         },
         {
+            "Key": "519344d1-e1e9-45f1-ba2f-ca50f57f28af",
+            "Value": {
+                "id": "d14b9eb8-3e53-4a49-85c8-51c3736044f9",
+                "resourcePath": "objects\\crops\\crops.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "53417273-72b3-4d8d-ae7d-91698b499a99",
             "Value": {
                 "id": "afd5f708-21b6-416c-a6b2-cd018df373b6",
@@ -348,6 +356,14 @@
                 "id": "7ede7bfb-d24e-46bf-9a22-2fce7aeff747",
                 "resourcePath": "objects\\obj_npc1\\obj_npc1.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "78cf90eb-7f5b-456d-ad41-e71c17c8de55",
+            "Value": {
+                "id": "3541cb2a-001c-4758-b82f-0b3981c77df8",
+                "resourcePath": "scripts\\instance_create_crop\\instance_create_crop.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -559,6 +575,14 @@
             }
         },
         {
+            "Key": "c0fca8b7-232c-4ba0-bc4c-0e520c860732",
+            "Value": {
+                "id": "6e2da9c1-c2e6-4d0a-b1e0-f0eb8e02284c",
+                "resourcePath": "scripts\\create_crop_type\\create_crop_type.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c288beec-d0c7-42b0-9d15-77d8ed33cf57",
             "Value": {
                 "id": "62637d0f-4594-4cef-a0e3-be51a97122be",
@@ -744,7 +768,8 @@
         }
     ],
     "script_order": [
-        
+        "c0fca8b7-232c-4ba0-bc4c-0e520c860732",
+        "78cf90eb-7f5b-456d-ad41-e71c17c8de55"
     ],
     "tutorial": ""
 }

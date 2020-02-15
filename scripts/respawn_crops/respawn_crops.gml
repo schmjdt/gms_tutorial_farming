@@ -19,10 +19,7 @@ with (inst) {
 	crop_type = argument2;
 	days_old = argument3;
 	growth_stage_duration = crops.ds_crops_types[# 0, crop_type];
-	
-	//var first_growth = 0;
-	//if (days_old > 0) first_growth = 1;
-	//growth_stage = days_old div growth_stage_duration;
+	check_crop_growth();
 }
 
 return inst;

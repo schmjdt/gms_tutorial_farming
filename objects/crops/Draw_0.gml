@@ -1,7 +1,7 @@
 /// @description 
 
 #region Crop Planting Icon
-if (game.planting) {
+if (planting) {
 	var i_grid = ds_crops_instances;
 	var cs = cell_size;
 

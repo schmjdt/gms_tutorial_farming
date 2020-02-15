@@ -39,4 +39,4 @@ if (room == rm_farm) {
 }
 #endregion
 
-game.planting = false;
+planting = false;

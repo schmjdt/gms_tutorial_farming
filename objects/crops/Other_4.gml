@@ -20,8 +20,6 @@ if (room == rm_farm) {
 			
 			slot += 1;
 		}
-		
-		check_crop_growth();
 	}	
 }
 #endregion

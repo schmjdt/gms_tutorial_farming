@@ -12,14 +12,14 @@ if (room == rm_farm) {
 } else {
 	// Increase the days_old of a crop within the grid
 	
-	var ds = crops.ds_crops_data;
-	
-	if (ds[# 0, 0] != -1) {
-		var h = ds_grid_height(ds);
-		var yy = 0;
-		repeat (h) {
-			ds[# 3, yy] += 1;
-			yy += 1;	
+	with (crops) {	
+		if (ds_crops_data[# 0, 0] != -1) {
+			var h = ds_grid_height(ds_crops_data);
+			var yy = 0;
+			repeat (h) {
+				ds_crops_data[# 3, yy] += 1;
+				yy += 1;	
+			}
 		}
 	}
 }

@@ -20,23 +20,23 @@ date_s = 0;
 date_y = 0;
 
 // seconds per step
-var increment_realtime = 1 / room_speed;
-var increment_debug = 1000;
-time_increment = increment_realtime;
+INCREMENT_REALTIME = 1 / room_speed;
+INCREMENT_DEBUG = 1000;
+time_increment = INCREMENT_REALTIME;
 
 #endregion
 
 #region Skybox 
 
 // opacity : 0 <--> 1
-darkness = 0;
+skybox_darkness = 0;
 
 // color
-light_color = c_black;
+skybox_color = c_black;
 
 // coords
-gui_widht  = display_get_gui_width();
-gui_height = display_get_gui_height();
+skybox_width  = display_get_gui_width();
+skybox_height = display_get_gui_height();
 
 #endregion
 

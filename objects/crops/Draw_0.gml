@@ -4,21 +4,24 @@ if (!planting) {
 	exit;
 }
 
+var i_grid = ds_crops_instances;
 var cs = cell_size;
 
 // Get closest grid position
-var xx = (mx div cs);
-var yy = (my div cs);
+var gx = (mx div cs);
+var gy = (my div cs);
 
-xx = xx * cs;
-yy = yy * cs;
+var cell = i_grid[# gx, gy];
+
+xx = gx * cs;
+yy = gy * cs;
 
 var c = c_red;
 
 // Check for soil
 var is_tile = has_tile("T_Soil", mx, my);
 
-if (is_tile) {
+if (is_tile and cell == 0) {
 	c = c_lime;
 }
 

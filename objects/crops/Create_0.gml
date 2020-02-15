@@ -8,8 +8,8 @@ cell_size = 32;
 mx = 0;
 my = 0;
 
-ds_crops_types = 0;
-ds_crops_instances = 0;
+ds_crops_types = -1;
+ds_crops_instances = -1;
 
 // TODO: Pull from XML ??
 enum crop {

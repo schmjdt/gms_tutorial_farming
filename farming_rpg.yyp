@@ -559,6 +559,14 @@
             }
         },
         {
+            "Key": "acfcad59-8d91-49f7-a2b7-8332e058fc5a",
+            "Value": {
+                "id": "a219559e-2c45-4958-8ee5-548cbd4bee28",
+                "resourcePath": "objects\\day_cycle\\day_cycle.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b106cb78-fd81-4c9c-8231-62c9a13cfa81",
             "Value": {
                 "id": "91cbd5d1-536c-40b1-be62-5058b6605dd2",

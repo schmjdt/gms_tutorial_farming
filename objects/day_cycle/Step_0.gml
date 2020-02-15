@@ -14,6 +14,11 @@ skybox_darkness = time_h / 24;
 if (time_h >= 24) {
 	time_s = 0;
 	date_d += 1;
+	
+	with (crops) {
+		event_perform(ev_other, ev_user1);
+	}
+	
 	if (date_d > 30) {
 		date_d = 1;
 		date_s += 1;

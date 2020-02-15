@@ -1,8 +1,8 @@
 {
-    "id": "59628273-ea0c-4e45-ba48-81de815cc027",
+    "id": "2874fe9f-4cab-4b74-8f3e-563c36ece02a",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "check_crop_growth",
+    "name": "increment_crop_growth",
     "IsCompatibility": false,
     "IsDnD": false
 }

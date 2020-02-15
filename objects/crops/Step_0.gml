@@ -1,7 +1,7 @@
 /// @description 
 
 #region Planting
-if (game.planting) {
+if (planting) {
 	mx = mouse_x;
 	my = mouse_y;
 	

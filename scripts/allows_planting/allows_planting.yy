@@ -1,8 +1,8 @@
 {
-    "id": "59628273-ea0c-4e45-ba48-81de815cc027",
+    "id": "25f13563-446d-4ba9-9fae-5adbb555e710",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "check_crop_growth",
+    "name": "allows_planting",
     "IsCompatibility": false,
     "IsDnD": false
 }

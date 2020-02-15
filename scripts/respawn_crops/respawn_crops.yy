@@ -1,8 +1,8 @@
 {
-    "id": "59628273-ea0c-4e45-ba48-81de815cc027",
+    "id": "89beb0e9-9363-4f56-9374-c78692eaeb47",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "check_crop_growth",
+    "name": "respawn_crops",
     "IsCompatibility": false,
     "IsDnD": false
 }

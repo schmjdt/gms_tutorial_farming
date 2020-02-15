@@ -1,6 +1,5 @@
 /// @description 
 
-planting = false;
 select_crop = 0;
 
 cell_size = 32;

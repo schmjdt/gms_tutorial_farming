@@ -1,10 +1,7 @@
 /// @description 
 
-if (keyboard_check_pressed(ord("P"))) {
-	planting = !planting;
-}
-
-if (planting) {
+#region Planting
+if (game.planting) {
 	mx = mouse_x;
 	my = mouse_y;
 	
@@ -26,3 +23,4 @@ if (planting) {
 		instance_create_crop(mx, my, select_crop);
 	}
 }
+#endregion

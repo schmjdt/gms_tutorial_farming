@@ -14,6 +14,8 @@ spawn_player_facing = -1;
 
 do_transition = false;
 
+planting = false;
+
 // Directions - based on 'direction' and unit circle
 enum dir {
 	right = 0,

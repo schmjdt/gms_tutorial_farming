@@ -12,6 +12,14 @@ var yy = (argument1 div cs);
 xx = xx * cs;
 yy = yy * cs;
 
+// Check for soil
+var is_tile = has_tile("T_Soil", argument0, argument1);
+
+if (!is_tile) {
+	show_debug_message("There is no soil here.");
+	return false;
+}
+
 // Get center of grid
 var cx = xx + (cs / 2);
 var cy = yy + (cs / 2);

@@ -559,6 +559,14 @@
             }
         },
         {
+            "Key": "acfcad59-8d91-49f7-a2b7-8332e058fc5a",
+            "Value": {
+                "id": "a219559e-2c45-4958-8ee5-548cbd4bee28",
+                "resourcePath": "objects\\day_cycle\\day_cycle.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b106cb78-fd81-4c9c-8231-62c9a13cfa81",
             "Value": {
                 "id": "91cbd5d1-536c-40b1-be62-5058b6605dd2",
@@ -735,6 +743,14 @@
             }
         },
         {
+            "Key": "e013a230-f2f8-4468-9ecd-f51077ff99e9",
+            "Value": {
+                "id": "1c32f5c7-b545-4f76-82f4-84fc01d29259",
+                "resourcePath": "scripts\\draw_gui_text\\draw_gui_text.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ead6cb2b-ad15-4430-b997-108acd037762",
             "Value": {
                 "id": "6d922547-7335-4131-98f8-d3ce62f73151",
@@ -838,7 +854,8 @@
         "2874fe9f-4cab-4b74-8f3e-563c36ece02a",
         "59628273-ea0c-4e45-ba48-81de815cc027",
         "89beb0e9-9363-4f56-9374-c78692eaeb47",
-        "25f13563-446d-4ba9-9fae-5adbb555e710"
+        "25f13563-446d-4ba9-9fae-5adbb555e710",
+        "e013a230-f2f8-4468-9ecd-f51077ff99e9"
     ],
     "tutorial": ""
 }

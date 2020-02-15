@@ -1,8 +1,8 @@
 /// @description 
 
-if (!debug) { 
-	exit;
-}
+if (!debug) exit;
+
+#region Collision outlines
 
 // Drawing boxes around all collisions
 with (obj_collision) {
@@ -13,6 +13,21 @@ with (obj_collision) {
 with (obj_player) {
 	draw_rectangle_color(bbox_left, bbox_top, bbox_right, bbox_bottom, c_yellow, c_yellow, c_yellow, c_yellow, true)
 }
+
+#endregion
+
+#region Other boxes
+
+// Drawing boxes around all transitions
+with (obj_transition) {
+	draw_set_alpha(0.3);
+	draw_rectangle_color(bbox_left, bbox_top, bbox_right, bbox_bottom, c_teal, c_teal, c_teal, c_teal, false)
+	draw_set_alpha(1);
+}
+
+#endregion
+
+#region Grid
 
 // Drawing the grid for placing crops
 var cs = crops.cell_size;
@@ -34,3 +49,6 @@ repeat (hr) {
 }
 
 draw_set_alpha(1);
+
+#endregion
+

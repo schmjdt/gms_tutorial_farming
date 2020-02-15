@@ -3,8 +3,10 @@
 var inst_num = instance_number(par_depth);
 var dg = ds_depth_grid;
 
-// Resize Grid
-ds_grid_resize(dg, 2, inst_num);
+// Resize Grid (only if it needs to)
+if (ds_grid_height(dg) != inst_num) {
+	ds_grid_resize(dg, 2, inst_num);
+}
 
 // Add instances to the grid
 var yy = 0;

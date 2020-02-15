@@ -14,10 +14,10 @@ if (skybox_draw) {
 
 #region Vars
 
-if (game.debug) {
-	var c = c_yellow;
-	draw_text_color(10, 10, string(time_h) + ":" + string(time_m) + ":" + string(time_s), c, c, c, c, 1);
-	draw_text_color(10, 30, string(date_y) + "/" + string(date_s) + "/" + string(date_d), c, c, c, c, 1);
-}
+//if (game.debug) {
+//	var c = c_yellow;
+//	draw_text_color(10, 10, string(time_h) + ":" + string(time_m) + ":" + string(time_s), c, c, c, c, 1);
+//	draw_text_color(10, 30, string(date_y) + "/" + string(date_s) + "/" + string(date_d), c, c, c, c, 1);
+//}
 
 #endregion

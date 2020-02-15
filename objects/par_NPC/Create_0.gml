@@ -1,5 +1,7 @@
 /// @description npc initialization
 
+event_inherited();
+
 // Character Movement
 
 spd_slow = 1;

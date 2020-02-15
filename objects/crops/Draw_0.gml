@@ -13,6 +13,18 @@ var yy = (my div cs);
 xx = xx * cs;
 yy = yy * cs;
 
+var c = c_red;
+
+// Check for soil
+var is_tile = has_tile("T_Soil", mx, my);
+
+if (is_tile) {
+	c = c_lime;
+}
+
+// Draw a rectangle for plantability
+draw_rectangle_color(xx, yy, xx + cs, yy + cs, c, c, c, c, true)
+
 // Get center of grid
 var cx = xx + (cs / 2);
 var cy = yy + (cs / 2);

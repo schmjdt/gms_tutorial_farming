@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description 
 
 debug = false;
 
@@ -13,6 +13,8 @@ spawn_y = 0;
 spawn_player_facing = -1;
 
 do_transition = false;
+
+planting = false;
 
 // Directions - based on 'direction' and unit circle
 enum dir {

@@ -1,6 +1,6 @@
 /// @description 
 
-if (!planting) {
+if (!game.planting) {
 	exit;
 }
 

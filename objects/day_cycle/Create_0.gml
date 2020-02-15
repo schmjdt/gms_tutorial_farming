@@ -30,6 +30,7 @@ time_increment = INCREMENT_REALTIME;
 
 // opacity : 0 <--> 1
 skybox_darkness = 0;
+skybox_draw = false;
 
 // color
 skybox_color = c_black;

@@ -11,16 +11,16 @@ var cs = cell_size;
 var gx = (mx div cs);
 var gy = (my div cs);
 
-var cell = i_grid[# gx, gy];
-
 xx = gx * cs;
 yy = gy * cs;
 
-var c = c_red;
+// Check for planted crop
+var cell = i_grid[# gx, gy];
 
 // Check for soil
 var is_tile = has_tile("T_Soil", mx, my);
 
+var c = c_red;
 if (is_tile and cell == 0) {
 	c = c_lime;
 }

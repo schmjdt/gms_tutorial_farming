@@ -1,5 +1,7 @@
 /// @description 
 
+collidable = false;
+
 frame_width  = 32;
 frame_height = 64;
 

@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "day_cycle",
     "eventList": [
-        
+        {
+            "id": "cbae57a5-0e4a-46ad-af5d-dee006704b31",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "acfcad59-8d91-49f7-a2b7-8332e058fc5a"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

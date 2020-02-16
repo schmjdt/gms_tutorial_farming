@@ -22,15 +22,16 @@ date_y = 0;
 // seconds per step
 INCREMENT_PAUSE = 0;
 INCREMENT_REALTIME = 1 / room_speed;
-INCREMENT_DEBUG = 1000;
+INCREMENT_DEBUG = 100;
 time_increment = INCREMENT_REALTIME;
 
 #endregion
 
 #region Skybox 
 
-// opacity : 0 <--> 1
+// opacity : 0 <--> 1 alpha value
 skybox_darkness = 0;
+skybox_darkness_max = 0.7;
 skybox_draw = false;
 
 // color
@@ -42,3 +43,9 @@ skybox_height = display_get_gui_height();
 
 #endregion
 
+enum phase {
+	sunrise = 6,
+	day		= 8.5,
+	sunset	= 18,
+	night	= 22
+}

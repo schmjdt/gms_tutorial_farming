@@ -35,10 +35,10 @@ ds_player_info[# 0, 2] = "Silver";
 ds_player_info[# 0, 3] = "Copper";
 
 // TODO: remove random testing numbers
-ds_player_info[# 1, 0] = irandom_range(0, 99);
+ds_player_info[# 1, 0] = "Player";
 ds_player_info[# 1, 1] = irandom_range(0, 99);
 ds_player_info[# 1, 2] = irandom_range(0, 99);
-ds_player_info[# 1, 3] = "Player";
+ds_player_info[# 1, 3] = irandom_range(0, 99);
 
 gui_info_x = gui_inv_x + (9 * scale);
 gui_info_y = gui_inv_y + (9 * scale);

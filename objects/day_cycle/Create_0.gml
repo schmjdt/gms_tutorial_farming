@@ -15,9 +15,9 @@ time_m = 0;
 time_h = 0;
 
 // Year::Season::Day
-date_d = 0;
-date_s = 0;
-date_y = 0;
+date_d = 1;
+date_s = 1;
+date_y = 1;
 
 // seconds per step
 INCREMENT_PAUSE = 0;

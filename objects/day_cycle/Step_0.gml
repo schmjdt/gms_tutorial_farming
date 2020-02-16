@@ -71,7 +71,7 @@ if (skybox_draw) {
 		var d1 = darks[floor(dd)];
 		var d2 = darks[ceil(dd)];
 	
-		skybox_darkness = merge_number(d1, d2, dd - floor(dd));
+		skybox_darkness = lerp(d1, d2, dd - floor(dd));
 	}
 	
 	#endregion

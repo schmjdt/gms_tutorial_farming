@@ -1,8 +1,8 @@
 /// @description 
 
 debug = false;
-gui_vars = false;
-pause_time = false;
+gui_vars = true;
+pause_time = true;
 pause_game = false;
 
 gui_inventory = false;

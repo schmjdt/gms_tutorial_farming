@@ -30,7 +30,7 @@ if (do_transition) {
 
 #region Vars
 
-if (gui_vars or debug) {
+if (gui_vars or debug) {	
 	var lst;
 	
 	with (day_cycle) {

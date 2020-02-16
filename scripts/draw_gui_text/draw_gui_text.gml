@@ -4,6 +4,8 @@
 /// @arg y
 /// @arg color
 
+draw_set_font(fnt_text_12);
+	
 var yy = 0;
 repeat (array_length_1d(argument0)) {
 	c = argument3;

@@ -231,6 +231,14 @@
             }
         },
         {
+            "Key": "2f14ec6b-3359-4739-902e-3249af81726d",
+            "Value": {
+                "id": "ba18bfad-dd16-4776-8912-d2aff7124928",
+                "resourcePath": "fonts\\fnt_text_24\\fnt_text_24.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "2f441c16-3837-4bd8-88c7-0652d7a2379b",
             "Value": {
                 "id": "4321ba2b-73de-4f33-b3d6-dd1119031d8c",
@@ -356,6 +364,14 @@
                 "id": "c3611bf2-b8ca-4f7e-a011-5ade4733d284",
                 "resourcePath": "sprites\\spr_collision\\spr_collision.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5a8cbf0c-d28a-41e5-869d-cfb2e5aaae3c",
+            "Value": {
+                "id": "4fef71d2-d384-4692-81d7-1e67f4ce9e41",
+                "resourcePath": "fonts\\fnt_small_digits\\fnt_small_digits.yy",
+                "resourceType": "GMFont"
             }
         },
         {
@@ -860,6 +876,14 @@
                 "id": "c0df6530-c907-4e5c-9c31-e4440323c918",
                 "resourcePath": "objects\\depth_sorter\\depth_sorter.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fcc12f36-bc30-4853-b94c-2ebcbf178dff",
+            "Value": {
+                "id": "ab6b68bd-93aa-4148-9ea3-24b03352edb8",
+                "resourcePath": "fonts\\fnt_text_12\\fnt_text_12.yy",
+                "resourceType": "GMFont"
             }
         },
         {

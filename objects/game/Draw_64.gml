@@ -31,69 +31,24 @@ if (do_transition) {
 #region Vars
 
 if (gui_vars or debug) {
+	var lst = ds_list_create();
 	
-	#region Option 3
 	with (day_cycle) {
-		var lst = ds_list_create();
 		ds_list_add(lst, string(time_h) + ":" + string(time_m) + ":" + string(time_s));
 		ds_list_add(lst, string(date_y) + "/" + string(date_s) + "/" + string(date_d));
-		draw_gui_text(lst, 10, 10, c_yellow);
 	}
+	
+	// Draw day_cycle text
+	draw_gui_text(lst, 10, 10, c_yellow);
+	ds_list_clear(lst);
 	
 	with (obj_player) {
-		var lst = ds_list_create();
 		ds_list_add(lst, "Player Coord: " + string(x) + " x " + string(y));
-		draw_gui_text(lst, 10, 80, c_blue);
 	}
-	#endregion
 	
-	#region Option 2
-	//var ds_text = ds_grid_create(2, 3);
-	
-	//with (day_cycle) {
-	//	ds_text[# 0, 0] = string(time_h) + ":" + string(time_m) + ":" + string(time_s);
-	//	ds_text[# 1, 0] = c_yellow;
-		
-	//	ds_text[# 0, 1] = string(date_y) + "/" + string(date_s) + "/" + string(date_d);
-	//	ds_text[# 1, 1] = c_yellow;
-	//}
-	
-	//#region obj_player
-	
-	//with (obj_player) {
-	//	ds_text[# 0, 2] = "Player Coord: " + string(x) + " x " + string(y);
-	//	ds_text[# 1, 2] = c_yellow;
-	//}
-			
-	//var yy = 0;
-	//repeat (ds_grid_height(ds_text)) {
-	//	c = ds_text[# 1, yy];
-	//	draw_text_color(10, 10 + (20 * yy), ds_text[# 0, yy], c, c, c, c, 1);
-	//	yy += 1;
-	//}
-	#endregion
-		
-	
-	#region Option 1
-	//#region	day_cycle
-
-	//with (day_cycle) {
-	//	var c = c_yellow;
-	//	draw_text_color(10, 10, string(time_h) + ":" + string(time_m) + ":" + string(time_s), c, c, c, c, 1);
-	//	draw_text_color(10, 30, string(date_y) + "/" + string(date_s) + "/" + string(date_d), c, c, c, c, 1);
-	//}
-	
-	//#endregion
-
-	//#region obj_player
-	
-	//with (obj_player) {
-	//	var c = c_yellow;
-	//	draw_text_color(10, 60, "Player Coord: " + string(x) + " x " + string(y), c, c, c, c, 1);
-	//}
-		
-	//#endregion
-	#endregion
+	// Draw obj_player text
+	draw_gui_text(lst, 10, 80, c_blue);
+	ds_list_clear(lst);
 }
 
 #endregion

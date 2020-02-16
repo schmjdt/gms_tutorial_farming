@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "07221591-2598-430c-ae03-5c9ca5212e41",
+            "Value": {
+                "id": "84073df9-50aa-4ccd-8e4d-93d1f1f48b3f",
+                "resourcePath": "objects\\inventory\\inventory.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "08360c9e-a0a2-4a3f-a7c3-21ad5e9b7555",
             "Value": {
                 "id": "726667b4-0d6c-45e0-b833-b68b982d9ca5",
@@ -223,6 +231,14 @@
             }
         },
         {
+            "Key": "2f14ec6b-3359-4739-902e-3249af81726d",
+            "Value": {
+                "id": "ba18bfad-dd16-4776-8912-d2aff7124928",
+                "resourcePath": "fonts\\fnt_text_24\\fnt_text_24.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "2f441c16-3837-4bd8-88c7-0652d7a2379b",
             "Value": {
                 "id": "4321ba2b-73de-4f33-b3d6-dd1119031d8c",
@@ -275,6 +291,14 @@
             "Value": {
                 "id": "9c96fe06-05ed-49d0-b4df-42210f7e6016",
                 "resourcePath": "sprites\\spr_torso_male_shirt_white\\spr_torso_male_shirt_white.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3cd37eb9-9720-4663-8e5b-eb6a87e1ccaf",
+            "Value": {
+                "id": "f2b480b3-c223-4776-8ae9-557ec0361633",
+                "resourcePath": "sprites\\spr_coins\\spr_coins.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -340,6 +364,14 @@
                 "id": "c3611bf2-b8ca-4f7e-a011-5ade4733d284",
                 "resourcePath": "sprites\\spr_collision\\spr_collision.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5a8cbf0c-d28a-41e5-869d-cfb2e5aaae3c",
+            "Value": {
+                "id": "4fef71d2-d384-4692-81d7-1e67f4ce9e41",
+                "resourcePath": "fonts\\fnt_small_digits\\fnt_small_digits.yy",
+                "resourceType": "GMFont"
             }
         },
         {
@@ -451,6 +483,14 @@
             "Value": {
                 "id": "1defaa3f-e4de-41e0-a0ce-7e008425bed8",
                 "resourcePath": "sprites\\spr_bg\\spr_bg.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8a5ac85e-6148-4b0d-849b-fa265343d154",
+            "Value": {
+                "id": "9c1ccdd4-68b5-498e-bd1f-acb16bea4908",
+                "resourcePath": "sprites\\spr_inventory_UI\\spr_inventory_UI.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -615,6 +655,14 @@
             }
         },
         {
+            "Key": "bbd610d6-066b-4be9-9f9a-318cb2e5845e",
+            "Value": {
+                "id": "da327d2e-8bef-4a98-b955-97fcdaaa1dcd",
+                "resourcePath": "views\\bbd610d6-066b-4be9-9f9a-318cb2e5845e.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "bd391068-2dce-411a-9694-9976dbe3dc7c",
             "Value": {
                 "id": "e896a808-c2ad-490e-904d-1f1cb60606ab",
@@ -628,6 +676,14 @@
                 "id": "97c6f1f6-3db6-4129-9035-6230b42ec34f",
                 "resourcePath": "objects\\obj_collision\\obj_collision.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c0384757-82c7-4ee0-8688-ba6fc089c47b",
+            "Value": {
+                "id": "e180645c-4dd3-425f-83bf-8c2a2f34483a",
+                "resourcePath": "sprites\\spr_inventory_items\\spr_inventory_items.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -820,6 +876,14 @@
                 "id": "c0df6530-c907-4e5c-9c31-e4440323c918",
                 "resourcePath": "objects\\depth_sorter\\depth_sorter.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fcc12f36-bc30-4853-b94c-2ebcbf178dff",
+            "Value": {
+                "id": "ab6b68bd-93aa-4148-9ea3-24b03352edb8",
+                "resourcePath": "fonts\\fnt_text_12\\fnt_text_12.yy",
+                "resourceType": "GMFont"
             }
         },
         {

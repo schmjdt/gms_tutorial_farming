@@ -1,9 +1,11 @@
 /// @description 
 
 debug = false;
-gui_vars = false;
-pause_time = false;
+gui_vars = true;
+pause_time = true;
 pause_game = false;
+
+gui_inventory = true;
 
 gui_width = display_get_gui_width();
 gui_height = display_get_gui_height();

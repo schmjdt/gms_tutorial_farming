@@ -10,7 +10,7 @@
 */
 
 // Hour::Minute::Second
-time_s = 0;
+time_s = 31000;
 time_m = 0;
 time_h = 0;
 

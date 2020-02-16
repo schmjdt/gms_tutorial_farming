@@ -5,6 +5,8 @@ gui_vars = false;
 pause_time = false;
 pause_game = false;
 
+gui_inventory = false;
+
 gui_width = display_get_gui_width();
 gui_height = display_get_gui_height();
 

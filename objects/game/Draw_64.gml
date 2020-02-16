@@ -31,24 +31,28 @@ if (do_transition) {
 #region Vars
 
 if (gui_vars or debug) {
-	var lst = ds_list_create();
+	var lst;
 	
 	with (day_cycle) {
-		ds_list_add(lst, string(time_h) + ":" + string(time_m) + ":" + string(time_s));
-		ds_list_add(lst, string(date_y) + "/" + string(date_s) + "/" + string(date_d));
+		lst = [
+			string(time_s),
+			string(time_m),
+			string(time_h),
+			string(date_y) + " / " + string(date_s) + " / " + string(date_d)
+		];
 	}
 	
 	// Draw day_cycle text
 	draw_gui_text(lst, 10, 10, c_yellow);
-	ds_list_clear(lst);
 	
 	with (obj_player) {
-		ds_list_add(lst, "Player Coord: " + string(x) + " x " + string(y));
+		lst = [
+			"Player Coord: " + string(x) + " x " + string(y)
+		];
 	}
 	
 	// Draw obj_player text
-	draw_gui_text(lst, 10, 80, c_blue);
-	ds_list_clear(lst);
+	draw_gui_text(lst, 10, room_height - 20, c_yellow);
 }
 
 #endregion

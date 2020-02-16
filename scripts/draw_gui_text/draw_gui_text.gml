@@ -4,11 +4,9 @@
 /// @arg y
 /// @arg color
 
-lst = argument0
 var yy = 0;
-
-repeat (ds_list_size(lst)) {
+repeat (array_length_1d(argument0)) {
 	c = argument3;
-	draw_text_color(argument1, argument2 + (20 * yy), lst[| yy], c, c, c, c, 1);
+	draw_text_color(argument1, argument2 + (20 * yy), argument0[yy], c, c, c, c, 1);
 	yy += 1;
 }

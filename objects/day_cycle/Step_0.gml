@@ -2,7 +2,7 @@
 
 #region Time
 
-time_increment = INCREMENT_REALTIME;
+time_increment = INCREMENT_HOUR_PER_SEC;
 if (game.debug) time_increment = INCREMENT_DEBUG;
 if (game.pause_time) time_increment = INCREMENT_PAUSE;
 

@@ -20,9 +20,11 @@ date_s = 1;
 date_y = 1;
 
 // seconds per step
-INCREMENT_PAUSE = 0;
-INCREMENT_REALTIME = 1 / room_speed;
-INCREMENT_DEBUG = 100;
+INCREMENT_PAUSE			= 0;
+INCREMENT_REALTIME		= 1 / room_speed;
+INCREMENT_HOUR_PER_SEC	= 60;
+INCREMENT_MIN_PER_SEC	= 1;
+INCREMENT_DEBUG			= 100;
 time_increment = INCREMENT_REALTIME;
 
 #endregion

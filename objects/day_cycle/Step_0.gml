@@ -2,6 +2,7 @@
 
 time_increment = INCREMENT_REALTIME;
 if (game.debug) time_increment = INCREMENT_DEBUG;
+if (game.pause_time) time_increment = INCREMENT_PAUSE;
 
 // Increment time
 time_s += time_increment;

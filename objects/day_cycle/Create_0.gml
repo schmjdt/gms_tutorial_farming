@@ -20,6 +20,7 @@ date_s = 0;
 date_y = 0;
 
 // seconds per step
+INCREMENT_PAUSE = 0;
 INCREMENT_REALTIME = 1 / room_speed;
 INCREMENT_DEBUG = 1000;
 time_increment = INCREMENT_REALTIME;

@@ -30,7 +30,7 @@ if (do_transition) {
 
 #region Vars
 
-if (vars or debug) {
+if (gui_vars or debug) {
 	#region	day_cycle
 
 	with (day_cycle) {

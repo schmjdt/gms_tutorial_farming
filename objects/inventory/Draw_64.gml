@@ -74,13 +74,35 @@ repeat (inv_slots) {
 		//show_debug_message("ci: " + string(ci) + ", sx: " + string(sx) + ", sy: " + string(sy));
 		
 		// --- Item
-		draw_sprite_part_ext(
-			spr_inv_items, 0,
-			sx, sy, cell_size, cell_size,
-			xx, yy,
-			scale, scale,
-			c_white, 1
-		);
+		switch (ii) {
+			case moused_over_slot:
+				draw_sprite_part_ext(
+					spr_inv_items, 0,
+					sx, sy, cell_size, cell_size,
+					xx, yy,
+					scale, scale,
+					c_white, 1
+				);
+				
+				gpu_set_blendmode(bm_add);				
+				draw_sprite_part_ext(
+					spr_inv_UI, 0, 
+					0, 0, cell_size, cell_size,
+					xx, yy,
+					scale, scale,
+					c_white, 0.3
+				);				
+				gpu_set_blendmode(bm_normal);
+			default:
+				draw_sprite_part_ext(
+					spr_inv_items, 0,
+					sx, sy, cell_size, cell_size,
+					xx, yy,
+					scale, scale,
+					c_white, 1
+				);
+				break;
+		}
 	
 		// Draw item Number
 		num = inv_grid[# 1, ii];

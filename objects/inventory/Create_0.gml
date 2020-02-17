@@ -4,7 +4,7 @@
 depth = -1;
 
 // Correct for resolution of room
-scale = 2;
+scale = game.room_scale;
 
 // GUI's actual width and height
 gui_width  = display_get_gui_width();
@@ -68,12 +68,12 @@ inv_slots_height	= 3;
 inv_slots_buffer_x	= 2;
 inv_slots_buffer_y	= 4;
 
-moused_over_slot = 0;
-moused_over_slot_last = -1;
+moused_over_slot = -1;
+moused_over_slot_last = -2;
 picked_item = -1;
 
-mouse_slot_x = 0;
-mouse_slot_y = 0;
+mouse_slot_x = -1;
+mouse_slot_y = -1;
 
 #endregion
 

@@ -61,18 +61,17 @@ repeat (inv_slots) {
 	//show_debug_message("col: " + string(spr_inv_items_columns) + ", row: " + string(spr_inv_items_rows));
 	//show_debug_message("ci: " + string(ci) + ", sx: " + string(sx) + ", sy: " + string(sy));
 	
-	if (ci > 0) {
-		// Draw Slot and Item	
-		// -- Slot
-		draw_sprite_part_ext(
-			spr_inv_UI, 0, 
-			0, 0, cell_size, cell_size,
-			xx, yy,
-			scale, scale,
-			c_white, 1
-		);
+	// Draw Slot
+	draw_sprite_part_ext(
+		spr_inv_UI, 0, 
+		0, 0, cell_size, cell_size,
+		xx, yy,
+		scale, scale,
+		c_white, 1
+	);
 		
-		// --- Item
+	if (ci > 0) {
+		// Draw Item
 		switch (ii) {
 			case moused_over_slot:
 				draw_sprite_part_ext(

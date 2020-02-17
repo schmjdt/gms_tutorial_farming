@@ -1,7 +1,7 @@
 /// @description 
 
 if (!game.gui_inventory) exit;
-
+		
 #region Mouse Slot
 
 moused_over_slot = -1;
@@ -49,14 +49,57 @@ if (inv_mouse_x > 0 and inv_mouse_x < gui_slot_x + (cell_size * scale) and
 
 if (moused_over_slot != -1) {
 	var inv_grid = ds_inventory;
-	
+	var width_grid = ds_grid_width(inv_grid)
+
 	var ss_item = inv_grid[# 0, moused_over_slot];
 	
-	if (ss_item != item.none) {
+	if (picked_slot != -1) {
+		if (mouse_check_button_pressed(mb_left)) {
+			if (ss_item == item.none) {
+				// Empty Slot - Drop
+				var xx = 0;
+				repeat (width_grid) {
+					inv_grid[# xx, moused_over_slot] = inv_grid[# xx, picked_slot];
+					inv_grid[# xx, picked_slot] = 0;
+					xx += 1;
+				}
+				
+				picked_slot = -1;				
+			} else if (ss_item == inv_grid[# 0, picked_slot]) {
+				// Contains Same Contents (but not same slot) - Stack
+				if (moused_over_slot != picked_slot) {
+					inv_grid[# 1, moused_over_slot] += inv_grid[# 1, picked_slot];
+					
+					var xx = 0;
+					repeat (width_grid) {
+						inv_grid[# xx, picked_slot] = 0;
+						xx += 1;
+					}
+				}
+				
+				picked_slot = -1;
+			} else {
+				// Contains Contents - Swap	
+				var xx = 0;
+				repeat (width_grid) {
+					var tmp = inv_grid[# xx, moused_over_slot]
+					inv_grid[# xx, moused_over_slot] = inv_grid[# xx, picked_slot];
+					inv_grid[# xx, picked_slot] = tmp;
+					xx += 1;
+				}
+				
+				//picked_slot = -1;		
+			}
+		}
+	} else if (ss_item != item.none) {
 		if (mouse_check_button_pressed(mb_right)) {
 			picked_slot = moused_over_slot;		
 		}
 	}
+} else {
+	if (mouse_check_button_pressed(mb_right) and picked_slot != -1) {
+		picked_slot = -1;		
+	}	
 }
 
 #endregion

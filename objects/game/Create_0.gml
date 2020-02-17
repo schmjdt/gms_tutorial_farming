@@ -19,6 +19,8 @@ spawn_player_facing = -1;
 
 do_transition = false;
 
+room_scale = view_wport[0] / camera_get_view_width(view_camera[0]);
+
 // Directions - based on 'direction' and unit circle
 enum dir {
 	right = 0,

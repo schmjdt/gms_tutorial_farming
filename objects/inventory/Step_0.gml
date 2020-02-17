@@ -92,6 +92,25 @@ if (moused_over_slot != -1) {
 			}
 		}
 	} else if (ss_item != item.none) {
+		// Drop Item into Game World
+		if (mouse_check_button_pressed(mb_middle)) {
+			inv_grid[# 1, moused_over_slot] -= 1;
+			
+			if (inv_grid[# 1, moused_over_slot] == 0) {
+				inv_grid[# 0, moused_over_slot] = item.none;
+			}
+			
+			// Create the item
+			var inst = instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_item);
+			with (inst) {
+				item_num = ss_item;
+				x_frame = item_num mod (spr_width / cell_size);
+				y_frame = item_num div (spr_width / cell_size);
+				show_debug_message("Dropped the item: " + string(item_num));
+			}			
+		}
+		
+		// Dropping Pickup Item into new Slot
 		if (mouse_check_button_pressed(mb_right)) {
 			picked_slot = moused_over_slot;		
 		}

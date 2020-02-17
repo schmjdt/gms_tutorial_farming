@@ -21,6 +21,5 @@ item_dst = 32;
 goal_x = x + lengthdir_x(item_dst, item_dir);
 goal_y = y + lengthdir_y(item_dst, item_dir);
 
-
-detect_dst = 30;
+detect_dst = 32;
 pickup_dst = 2;

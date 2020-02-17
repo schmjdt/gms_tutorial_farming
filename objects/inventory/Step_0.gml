@@ -2,10 +2,12 @@
 
 if (!game.gui_inventory) exit;
 
+#region Mouse Slot
+
 moused_over_slot = -1;
 		
-var gui_mouse_x = device_mouse_x_to_gui(0);
-var gui_mouse_y = device_mouse_y_to_gui(0);
+gui_mouse_x = device_mouse_x_to_gui(0);
+gui_mouse_y = device_mouse_y_to_gui(0);
 
 var cell_buffer_x = (cell_size + inv_slots_buffer_x) * scale;
 var cell_buffer_y = (cell_size + inv_slots_buffer_y) * scale;
@@ -39,3 +41,22 @@ if (inv_mouse_x > 0 and inv_mouse_x < gui_slot_x + (cell_size * scale) and
 		}
 	}
 }
+
+#endregion
+
+
+#region Pickup Item
+
+if (moused_over_slot != -1) {
+	var inv_grid = ds_inventory;
+	
+	var ss_item = inv_grid[# 0, moused_over_slot];
+	
+	if (ss_item != item.none) {
+		if (mouse_check_button_pressed(mb_right)) {
+			picked_slot = moused_over_slot;		
+		}
+	}
+}
+
+#endregion

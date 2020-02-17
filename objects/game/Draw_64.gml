@@ -82,7 +82,7 @@ if (gui_vars or debug) {
 	
 	// Draw mouse pos
 	draw_gui_text(lst, 10, room_height - 180, c_yellow);
-	draw_gui_text([lst[1]], gui_mouse_x, gui_mouse_y, c_black);
+	//draw_gui_text([lst[1]], gui_mouse_x, gui_mouse_y, c_black);
 	
 	with (obj_player) {
 		lst = [

@@ -54,7 +54,12 @@ repeat (inv_slots) {
 	yy = gui_slot_y + ((cell_size + inv_slots_buffer_y) * iy * scale);
 	
 	// Item
-	ci = inv_grid[# 0, ii];
+	ci = inv_grid[# 0, ii];	
+	sx = (ci mod spr_inv_items_columns) * cell_size;
+	sy = (ci div spr_inv_items_columns) * cell_size;
+		
+	//show_debug_message("col: " + string(spr_inv_items_columns) + ", row: " + string(spr_inv_items_rows));
+	//show_debug_message("ci: " + string(ci) + ", sx: " + string(sx) + ", sy: " + string(sy));
 	
 	if (ci > 0) {
 		// Draw Slot and Item	
@@ -66,12 +71,6 @@ repeat (inv_slots) {
 			scale, scale,
 			c_white, 1
 		);
-	
-		sx = (ci mod spr_inv_items_columns) * cell_size;
-		sy = (ci div spr_inv_items_columns) * cell_size;
-		
-		//show_debug_message("col: " + string(spr_inv_items_columns) + ", row: " + string(spr_inv_items_rows));
-		//show_debug_message("ci: " + string(ci) + ", sx: " + string(sx) + ", sy: " + string(sy));
 		
 		// --- Item
 		switch (ii) {
@@ -93,6 +92,16 @@ repeat (inv_slots) {
 					c_white, 0.3
 				);				
 				gpu_set_blendmode(bm_normal);
+				break;
+			case picked_slot:
+				draw_sprite_part_ext(
+					spr_inv_items, 0,
+					sx, sy, cell_size, cell_size,
+					xx, yy,
+					scale, scale,
+					c_white, 0.2
+				);
+				break;
 			default:
 				draw_sprite_part_ext(
 					spr_inv_items, 0,
@@ -107,13 +116,39 @@ repeat (inv_slots) {
 		// Draw item Number
 		num = inv_grid[# 1, ii];
 	
-		draw_text_color(xx, yy, string(num), c, c, c, c, 1);
+		switch (ii) {
+			case picked_slot:
+				draw_text_color(xx, yy, string(num), c, c, c, c, 0.2);
+				break;
+			default:
+				draw_text_color(xx, yy, string(num), c, c, c, c, 1);
+				break;
+		}
+			
 	}
 	
 	// Increment
 	ii += 1;
 	ix = ii mod inv_slots_width;	
 	iy = ii div inv_slots_width;
+}
+
+// Picking up the item within inventory
+if (picked_slot != -1) {
+	ci = inv_grid[# 0, picked_slot];	
+	num = inv_grid[# 1, picked_slot];
+	
+	sx = (ci mod spr_inv_items_columns) * cell_size;
+	sy = (ci div spr_inv_items_columns) * cell_size;
+		
+	draw_sprite_part_ext(
+		spr_inv_items, 0,
+		sx, sy, cell_size, cell_size,
+		gui_mouse_x, gui_mouse_y,
+		scale, scale,
+		c_white, 1
+	);
+	draw_text_color(gui_mouse_x + (cell_size / 4 * scale), gui_mouse_y, string(num), c, c, c, c, 1);
 }
 
 #endregion

@@ -70,8 +70,8 @@ repeat (inv_slots) {
 		sx = (ci mod spr_inv_items_columns) * cell_size;
 		sy = (ci div spr_inv_items_columns) * cell_size;
 		
-		show_debug_message("col: " + string(spr_inv_items_columns) + ", row: " + string(spr_inv_items_rows));
-		show_debug_message("ci: " + string(ci) + ", sx: " + string(sx) + ", sy: " + string(sy));
+		//show_debug_message("col: " + string(spr_inv_items_columns) + ", row: " + string(spr_inv_items_rows));
+		//show_debug_message("ci: " + string(ci) + ", sx: " + string(sx) + ", sy: " + string(sy));
 		
 		// --- Item
 		draw_sprite_part_ext(

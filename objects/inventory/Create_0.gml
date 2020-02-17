@@ -68,6 +68,13 @@ inv_slots_height	= 3;
 inv_slots_buffer_x	= 2;
 inv_slots_buffer_y	= 4;
 
+moused_over_slot = 0;
+moused_over_slot_last = -1;
+picked_item = -1;
+
+mouse_slot_x = 0;
+mouse_slot_y = 0;
+
 #endregion
 
 #region Inventory

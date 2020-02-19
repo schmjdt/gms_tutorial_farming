@@ -77,6 +77,15 @@ mouse_slot_y = -1;
 
 #endregion
 
+#region Inventory Item Description GUI
+
+gui_desc_x = gui_inv_x + (9  * scale);
+gui_desc_y = gui_inv_y + (156 * scale);
+
+gui_text_height = string_height("M");
+
+#endregion
+
 #region Inventory
 /* --- Inventory
 	0 = Item
@@ -153,7 +162,6 @@ ds_items_desc[# z, item.starfish] = "So called becase it looks like a star.";
 ds_items_desc[# z, item.mushroom] = "A fungus; not mush room for interpretation";
 
 #endregion
-
 
 // TODO: testing - random inventory
 var yy = 0;

@@ -59,10 +59,14 @@ if (inv_mouse_x > 0 and inv_mouse_x < gui_slot_x + (cell_size * scale) and
 #region Pickup Item
 
 /*
-	- You are moused over a slot or not
-	- The moused over slot contains an item
-	- You have an item picked up
-	- You are not moused over the inventory
+	- You are moused over an inventory slot
+	-	You have an item picked up
+	-	You do not have an item picked up 
+			and 
+		The moused over slot contains an item
+	- You are not moused over an inventory slot
+	-	You have an item picked up
+	-		You are not moused over the inventory
 */
 
 if (moused_over_slot != -1) {

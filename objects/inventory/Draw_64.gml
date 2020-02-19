@@ -2,6 +2,14 @@
 
 if (!game.gui_inventory) exit;
 
+var info_grid = ds_player_info;
+var desc_grid = ds_items_desc;
+var inv_grid = ds_inventory;
+
+var c, ci, ii, ix, iy, xx, yy, ci, sx, sy, num;
+ii = 0; ix = 0; iy = 0;
+
+
 #region Inventory GUI
 
 draw_sprite_part_ext(
@@ -17,8 +25,7 @@ draw_sprite_part_ext(
 
 #region Player Info
 
-var info_grid = ds_player_info;
-var c = c_black;
+c = c_black;
 
 // Player name
 draw_set_font(fnt_text_24);
@@ -27,7 +34,7 @@ draw_text_color(gui_info_x, gui_info_y, info_grid[# 0, 0] + ": " + info_grid[# 1
 // Coins
 draw_set_font(fnt_small_digits);
 
-var yy = 0;
+yy = 0;
 repeat (3) {
 	draw_text_color(
 		gui_info_x + (192 * scale) + ((15 + 18) * scale * yy), 
@@ -42,11 +49,33 @@ draw_set_font(0);
 
 #endregion
 
-#region Inventory Items
+#region Draw Item Description
 
-var inv_grid = ds_inventory;
-var ii, ix, iy, xx, yy, ci, sx, sy, num;
-ii = 0; ix = 0; iy = 0;
+if (moused_over_slot != -1) {
+	var description = "";
+
+	ci = inv_grid[# 0, moused_over_slot];
+
+	if (ci > 0) {
+		var name = desc_grid[# 0, ci]; 
+		var desc = desc_grid[# 1, ci];
+	
+		description = name + ". " + desc;
+		c = c_black;
+	
+		draw_set_font(fnt_text_12);
+		draw_text_ext_color(
+			gui_desc_x, gui_desc_y, 
+			description, gui_text_height, 
+			gui_inv_width * scale - (inv_slots_buffer_x * 2),
+			c, c, c, c, 1
+		);
+	}
+}
+
+#endregion
+
+#region Inventory Items
 
 repeat (inv_slots) {
 	// x,y location for slot
@@ -132,6 +161,8 @@ repeat (inv_slots) {
 	iy = ii div inv_slots_width;
 }
 
+#region Item Pickup
+
 // Picking up the item within inventory
 if (picked_slot != -1) {
 	ci = inv_grid[# 0, picked_slot];	
@@ -147,7 +178,10 @@ if (picked_slot != -1) {
 		scale, scale,
 		c_white, 1
 	);
+	
 	draw_text_color(gui_mouse_x + (cell_size / 4 * scale), gui_mouse_y, string(num), c, c, c, c, 1);
 }
+
+#endregion
 
 #endregion

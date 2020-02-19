@@ -77,6 +77,15 @@ mouse_slot_y = -1;
 
 #endregion
 
+#region Inventory Item Description GUI
+
+gui_desc_x = gui_inv_x + (9  * scale);
+gui_desc_y = gui_inv_y + (156 * scale);
+
+gui_text_height = string_height("M");
+
+#endregion
+
 #region Inventory
 /* --- Inventory
 	0 = Item
@@ -106,6 +115,53 @@ enum item {
 	mushroom	= 16,
 	height		= 17,
 }
+
+#region Create Items Description Grid
+
+ds_items_desc = ds_grid_create(2, item.height);
+
+var z = 0;
+
+// --- Name
+ds_items_desc[# z, item.none] = "Nothing";
+ds_items_desc[# z, item.tomato] = "Tomato";
+ds_items_desc[# z, item.potato] = "Potato";
+ds_items_desc[# z, item.carrot] = "Carrot";
+ds_items_desc[# z, item.artichoke] = "Artichoke";
+ds_items_desc[# z, item.chilli] = "Chilli";
+ds_items_desc[# z, item.gourd] = "Gourd";
+ds_items_desc[# z, item.corn] = "Corn";
+ds_items_desc[# z, item.wood] = "Wood";
+ds_items_desc[# z, item.stone] = "Stone";
+ds_items_desc[# z, item.bucket] = "Bucket";
+ds_items_desc[# z, item.chair] = "Chair";
+ds_items_desc[# z, item.picture] = "Picture";
+ds_items_desc[# z, item.axe] = "Axe";
+ds_items_desc[# z, item.potion] = "Potion";
+ds_items_desc[# z, item.starfish] = "Starfish";
+ds_items_desc[# z, item.mushroom] = "Mushroom";
+
+z = 1;
+// --- Desc
+ds_items_desc[# z, item.none] = "Empty.";
+ds_items_desc[# z, item.tomato] = "To-mah... may-to.";
+ds_items_desc[# z, item.potato] = "Pre-chips.";
+ds_items_desc[# z, item.carrot] = "Keep away from rabbits.";
+ds_items_desc[# z, item.artichoke] = "The heartiest vegetable.";
+ds_items_desc[# z, item.chilli] = "But oddly hot.";
+ds_items_desc[# z, item.gourd] = "Or is it an eggplant?";
+ds_items_desc[# z, item.corn] = "Better popped";
+ds_items_desc[# z, item.wood] = "Knock on it.";
+ds_items_desc[# z, item.stone] = "There's nothing written in it.";
+ds_items_desc[# z, item.bucket] = "You could fit a bucket-full of watert in here!";
+ds_items_desc[# z, item.chair] = "This chair is just right.";
+ds_items_desc[# z, item.picture] = "Wait, who even is this?";
+ds_items_desc[# z, item.axe] = "Chop chop!";
+ds_items_desc[# z, item.potion] = "The liquid looks... oozy.";
+ds_items_desc[# z, item.starfish] = "So called becase it looks like a star.";
+ds_items_desc[# z, item.mushroom] = "A fungus; not mush room for interpretation";
+
+#endregion
 
 // TODO: testing - random inventory
 var yy = 0;

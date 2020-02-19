@@ -2,6 +2,12 @@
 
 if (!game.gui_inventory) exit;
 		
+var inv_grid = ds_inventory;
+var width_grid = ds_grid_width(inv_grid);
+
+var inst, ss_item, pp_item;
+var xx, yy, nx, ny, sx, sy;
+	
 #region Mouse Slot
 
 moused_over_slot = -1;
@@ -15,13 +21,17 @@ var cell_buffer_y = (cell_size + inv_slots_buffer_y) * scale;
 var inv_mouse_x = gui_mouse_x - gui_slot_x;
 var inv_mouse_y = gui_mouse_y - gui_slot_y;
 
+var mouse_in_inventory = false;
+
 if (inv_mouse_x > 0 and inv_mouse_x < gui_slot_x + (cell_size * scale) and
 	inv_mouse_y > 0 and inv_mouse_y < gui_slot_y + (cell_size * scale)) {
-	var nx = inv_mouse_x div cell_buffer_x;
-	var ny = inv_mouse_y div cell_buffer_y;
+	mouse_in_inventory = true;
+	
+	nx = inv_mouse_x div cell_buffer_x;
+	ny = inv_mouse_y div cell_buffer_y;
 
-	var sx = inv_mouse_x - (nx * cell_buffer_x);
-	var sy = inv_mouse_y - (ny * cell_buffer_y);
+	sx = inv_mouse_x - (nx * cell_buffer_x);
+	sy = inv_mouse_y - (ny * cell_buffer_y);
 	
 	if (nx >= 0 and nx <= inv_slots_width and
 		ny >= 0 and ny <= inv_slots_height and
@@ -40,24 +50,35 @@ if (inv_mouse_x > 0 and inv_mouse_x < gui_slot_x + (cell_size * scale) and
 			}
 		}
 	}
+} else {
+	mouse_in_inventory = false
 }
 
 #endregion
 
-
 #region Pickup Item
 
-if (moused_over_slot != -1) {
-	var inv_grid = ds_inventory;
-	var width_grid = ds_grid_width(inv_grid)
+/*
+	- You are moused over an inventory slot
+	-	You have an item picked up
+	-	You do not have an item picked up 
+			and 
+		The moused over slot contains an item
+	- You are not moused over an inventory slot
+	-	You have an item picked up
+	-		You are not moused over the inventory
+*/
 
-	var ss_item = inv_grid[# 0, moused_over_slot];
+if (moused_over_slot != -1) {
+	ss_item = inv_grid[# 0, moused_over_slot];
 	
 	if (picked_slot != -1) {
 		if (mouse_check_button_pressed(mb_left)) {
 			if (ss_item == item.none) {
+				#region Put Picked Up Item Into Empty Slot
+				
 				// Empty Slot - Drop
-				var xx = 0;
+				xx = 0;
 				repeat (width_grid) {
 					inv_grid[# xx, moused_over_slot] = inv_grid[# xx, picked_slot];
 					inv_grid[# xx, picked_slot] = 0;
@@ -65,12 +86,16 @@ if (moused_over_slot != -1) {
 				}
 				
 				picked_slot = -1;				
+				
+				#endregion
 			} else if (ss_item == inv_grid[# 0, picked_slot]) {
+				#region Stack Picked Up Item Into Moused OVer Slot Of Same Item
+				
 				// Contains Same Contents (but not same slot) - Stack
 				if (moused_over_slot != picked_slot) {
 					inv_grid[# 1, moused_over_slot] += inv_grid[# 1, picked_slot];
 					
-					var xx = 0;
+					xx = 0;
 					repeat (width_grid) {
 						inv_grid[# xx, picked_slot] = 0;
 						xx += 1;
@@ -78,9 +103,13 @@ if (moused_over_slot != -1) {
 				}
 				
 				picked_slot = -1;
+				
+				#endregion
 			} else {
+				#region Swap Picked Up Item With Moused Over Item
+				
 				// Contains Contents - Swap	
-				var xx = 0;
+				xx = 0;
 				repeat (width_grid) {
 					var tmp = inv_grid[# xx, moused_over_slot]
 					inv_grid[# xx, moused_over_slot] = inv_grid[# xx, picked_slot];
@@ -88,12 +117,15 @@ if (moused_over_slot != -1) {
 					xx += 1;
 				}
 				
+				// Choose whether to just swap and drop or swap and pickup
 				//picked_slot = -1;		
+				
+				#endregion
 			}
 		}
 	} else if (ss_item != item.none) {
-		// Drop Item into Game World
 		if (mouse_check_button_pressed(mb_middle)) {
+			#region Drop Moused Over Item into Game World
 			inv_grid[# 1, moused_over_slot] -= 1;
 			
 			if (inv_grid[# 1, moused_over_slot] == 0) {
@@ -101,24 +133,52 @@ if (moused_over_slot != -1) {
 			}
 			
 			// Create the item
-			var inst = instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_item);
+			inst = instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_item);
 			with (inst) {
 				item_num = ss_item;
 				x_frame = item_num mod (spr_width / cell_size);
 				y_frame = item_num div (spr_width / cell_size);
 				show_debug_message("Dropped the item: " + string(item_num));
 			}			
-		}
-		
-		// Dropping Pickup Item into new Slot
-		if (mouse_check_button_pressed(mb_right)) {
-			picked_slot = moused_over_slot;		
+			#endregion
+		} else if (mouse_check_button_pressed(mb_right)) {
+			#region Pickup Moused Over Item
+			
+			picked_slot = moused_over_slot;
+			
+			#endregion
 		}
 	}
 } else {
-	if (mouse_check_button_pressed(mb_right) and picked_slot != -1) {
-		picked_slot = -1;		
-	}	
+	if (picked_slot != -1) {
+		if (mouse_check_button_pressed(mb_left) and !mouse_in_inventory) {
+			#region Drop Picked Up Item Into Game World
+			// Drop Item into Game World	
+			pp_item = inv_grid[# 0, picked_slot];
+			inv_grid[# 1, picked_slot] -= 1;
+			
+			if (inv_grid[# 1, picked_slot] == 0) {
+				inv_grid[# 0, picked_slot] = item.none;
+				picked_slot = -1;
+			}
+			
+			// Create the item
+			inst = instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_item);
+			with (inst) {
+				item_num = pp_item;
+				x_frame = item_num mod (spr_width / cell_size);
+				y_frame = item_num div (spr_width / cell_size);
+				show_debug_message("Dropped the item: " + string(item_num));
+			}			
+			#endregion
+		} else if (mouse_check_button_pressed(mb_right)) {
+			#region Put Picked Up Item Back Into Original Slot
+			
+			picked_slot = -1;		
+			
+			#endregion
+		}	
+	}
 }
 
 #endregion

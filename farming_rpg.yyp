@@ -378,7 +378,7 @@
             "Key": "5bb2d73e-08f3-4dca-8fe2-84a76f422f15",
             "Value": {
                 "id": "6a2b1ea3-b78c-451a-a98d-7d7bbd6794f7",
-                "resourcePath": "sprites\\spr_portaits\\spr_portaits.yy",
+                "resourcePath": "sprites\\spr_portraits\\spr_portraits.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -540,6 +540,14 @@
                 "id": "6f13ccdd-8be6-4ca2-8177-8ef56cac6e45",
                 "resourcePath": "sprites\\spr_textbox\\spr_textbox.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8d619d98-d149-432a-994e-b97d0fc53bc1",
+            "Value": {
+                "id": "4de8ef09-aca9-4181-b37b-371ae7ff1a45",
+                "resourcePath": "objects\\obj_textbox\\obj_textbox.yy",
+                "resourceType": "GMObject"
             }
         },
         {

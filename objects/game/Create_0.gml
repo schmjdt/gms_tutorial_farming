@@ -5,7 +5,7 @@ gui_vars = true;
 pause_time = true;
 pause_game = false;
 
-gui_inventory = true;
+gui_inventory = false;
 
 global.game_width  = camera_get_view_width(view_camera[0]);
 global.game_height = camera_get_view_height(view_camera[0]);

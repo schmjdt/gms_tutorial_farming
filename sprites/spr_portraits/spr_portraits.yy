@@ -2,7 +2,7 @@
     "id": "5bb2d73e-08f3-4dca-8fe2-84a76f422f15",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_portaits",
+    "name": "spr_portraits",
     "For3D": false,
     "HTile": false,
     "VTile": false,

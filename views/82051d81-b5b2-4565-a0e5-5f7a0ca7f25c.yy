@@ -10,7 +10,7 @@
         "a20e1f56-4ffd-4695-8d4e-1e6343580298"
     ],
     "filterType": "GMSound",
-    "folderName": "Dialog",
+    "folderName": "Dialogue",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

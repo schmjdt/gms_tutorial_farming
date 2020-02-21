@@ -219,7 +219,7 @@ if (in != -1) {
 						
 			var yy = 0;
 			repeat (grid_height) {
-				if (name == not_grid[# 1, yy]) {
+				if (name == not_grid[# 1, yy] and not_grid[# 0, yy] < 0) {
 					not_grid[# 0, yy] -= 1
 					in_grid = true;
 					break

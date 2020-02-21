@@ -52,11 +52,19 @@ draw_set_valign(fa_top);
 
 #region Draw Text
 
-if (counter < str_len) {
+if (!pause_text and counter < str_len) {
 	// Speed of typewriter effect
 	counter += 1;
+	
 	if (counter mod 4 == 0) {
 		audio_play_sound(voice, 10, false);
+	}
+	
+	switch(string_char_at(text_wrapped, counter)) {
+		case ",": pause_text = true; alarm[1] = 15; break;
+		case ".":
+		case "?":
+		case "!": pause_text = true; alarm[1] = 25; break;
 	}
 }
 

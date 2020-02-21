@@ -34,11 +34,9 @@ draw_sprite(namebox, 0, namebox_x, namebox_y);
 
 #endregion
 
-
 #region Draw Portrait Text
 
 draw_set_font(font);
-var text_height = string_height("M");
 var c;
 
 #region Draw Name
@@ -54,7 +52,7 @@ draw_set_valign(fa_top);
 
 #region Draw Text
 
-if (counter < string_length(text[page])) {
+if (counter < str_len) {
 	// Speed of typewriter effect
 	counter += 1;
 	if (counter mod 4 == 0) {
@@ -62,10 +60,10 @@ if (counter < string_length(text[page])) {
 	}
 }
 
-var substr = string_copy(text[page], 1, counter);
+var substr = string_copy(text_wrapped, 1, counter);
 
 c = c_text;
-draw_text_ext_color(text_x, text_y, substr, text_height, text_max_width, c, c, c, c, 1);
+draw_text_color(text_x, text_y, substr, c, c, c, c, 1);
 
 #endregion
 

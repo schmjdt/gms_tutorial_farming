@@ -45,3 +45,6 @@ c_name = c_black;
 font = fnt_text_9;
 
 interact_key = vk_space;
+
+draw_set_font(font);
+event_perform(ev_other, ev_user1);

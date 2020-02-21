@@ -57,6 +57,9 @@ draw_set_valign(fa_top);
 if (counter < string_length(text[page])) {
 	// Speed of typewriter effect
 	counter += 1;
+	if (counter mod 4 == 0) {
+		audio_play_sound(voice, 10, false);
+	}
 }
 
 var substr = string_copy(text[page], 1, counter);

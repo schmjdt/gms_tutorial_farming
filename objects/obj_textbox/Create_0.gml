@@ -35,7 +35,9 @@ text[0] = "this is a test string. this is a test string. this is a test string. 
 text[1] = "this is the second page";
 page = 0;
 counter = 0;
-name = "NPC";
+
+name  = "NPC";
+voice = snd_voice1;
 
 c_text = c_black;
 c_name = c_black;

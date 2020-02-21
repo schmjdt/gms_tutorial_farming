@@ -34,6 +34,7 @@ portrait_index = 0;
 text[0] = "this is a test string. this is a test string. this is a test string. this is a test string. this is a test string. this is a test string. this is a test string. this is a test string.";
 text[1] = "this is the second page";
 page = 0;
+counter = 0;
 name = "NPC";
 
 c_text = c_black;

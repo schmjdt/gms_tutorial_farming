@@ -54,8 +54,15 @@ draw_set_valign(fa_top);
 
 #region Draw Text
 
+if (counter < string_length(text[page])) {
+	// Speed of typewriter effect
+	counter += 1;
+}
+
+var substr = string_copy(text[page], 1, counter);
+
 c = c_text;
-draw_text_ext_color(text_x, text_y, text[page], text_height, text_max_width, c, c, c, c, 1);
+draw_text_ext_color(text_x, text_y, substr, text_height, text_max_width, c, c, c, c, 1);
 
 #endregion
 

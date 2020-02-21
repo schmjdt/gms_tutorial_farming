@@ -10,7 +10,7 @@
         "e288cf34-f83e-4b4a-9ee2-2b97dad133aa"
     ],
     "filterType": "GMSprite",
-    "folderName": "Dialog",
+    "folderName": "Dialogue",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

@@ -19,4 +19,22 @@ box_y	  = port_y;
 namebox_x = port_x;
 namebox_y = port_y - namebox_height;
 
+x_buffer = 12;
+y_buffer =  8;
+
+text_max_width = box_width - (2 * x_buffer);
+
+text_x = box_x + x_buffer;
+text_y = box_y + y_buffer;
+name_x = namebox_x + (namebox_width  / 2);
+name_y = namebox_y + (namebox_height / 2);
+
 portrait_index = 0;
+
+text = "this is a test string. this is a test string. this is a test string. this is a test string. this is a test string. this is a test string. this is a test string. this is a test string.";
+name = "NPC";
+
+c_text = c_black;
+c_name = c_black;
+
+font = fnt_text_9;

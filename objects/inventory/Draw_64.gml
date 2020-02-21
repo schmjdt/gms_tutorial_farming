@@ -28,7 +28,7 @@ draw_sprite_part_ext(
 c = c_black;
 
 // Player name
-draw_set_font(fnt_text_24);
+draw_set_font(fnt_text_14);
 draw_text_color(gui_info_x, gui_info_y, info_grid[# 0, 0] + ": " + info_grid[# 1, 0], c, c, c, c, 1);
 
 // Coins
@@ -63,7 +63,7 @@ if (moused_over_slot != -1) {
 		description = name + ". " + desc;
 		c = c_black;
 	
-		draw_set_font(fnt_text_12);
+		draw_set_font(fnt_text_9);
 		draw_text_ext_color(
 			gui_desc_x, gui_desc_y, 
 			description, gui_text_height, 

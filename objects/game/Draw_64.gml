@@ -55,7 +55,7 @@ if (gui_vars or debug) {
 		"room_scale: " + string(room_scale),
 	];
 	
-	draw_gui_text(lst, 10, 120, c_yellow);
+	draw_gui_text(lst, 10, 100, c_yellow);
 	
 	with (inventory) {
 		lst = [
@@ -70,7 +70,7 @@ if (gui_vars or debug) {
 		];
 	}
 	
-	draw_gui_text(lst, 10, 260, c_yellow);
+	draw_gui_text(lst, 10, 220, c_yellow);
 		
 	var game_mouse_x = mouse_x;
 	var game_mouse_y = mouse_y;
@@ -81,7 +81,7 @@ if (gui_vars or debug) {
 	       "GUI  Mouse: " + string(gui_mouse_x)  + " x " + string(gui_mouse_y)];
 	
 	// Draw mouse pos
-	draw_gui_text(lst, 10, room_height - 180, c_yellow);
+	draw_gui_text(lst, 10, gui_height - 60, c_yellow);
 	//draw_gui_text([lst[1]], gui_mouse_x, gui_mouse_y, c_black);
 	
 	with (obj_player) {
@@ -91,7 +91,7 @@ if (gui_vars or debug) {
 	}
 	
 	// Draw obj_player text
-	draw_gui_text(lst, 10, room_height - 20, c_yellow);
+	draw_gui_text(lst, 10, gui_height - 20, c_yellow);
 }
 
 #endregion

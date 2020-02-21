@@ -4,7 +4,7 @@ if (spawn_room == -1) {
 	exit;
 }
 
-room_scale = view_wport[0] / camera_get_view_width(view_camera[0]);
+room_scale = 1;
 
 obj_player.x = spawn_x;
 obj_player.y = spawn_y;

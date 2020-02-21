@@ -55,7 +55,7 @@ draw_set_valign(fa_top);
 #region Draw Text
 
 c = c_text;
-draw_text_ext_color(text_x, text_y, text, text_height, text_max_width, c, c, c, c, 1);
+draw_text_ext_color(text_x, text_y, text[page], text_height, text_max_width, c, c, c, c, 1);
 
 #endregion
 

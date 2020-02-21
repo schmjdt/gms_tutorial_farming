@@ -31,10 +31,14 @@ name_y = namebox_y + (namebox_height / 2);
 
 portrait_index = 0;
 
-text = "this is a test string. this is a test string. this is a test string. this is a test string. this is a test string. this is a test string. this is a test string. this is a test string.";
+text[0] = "this is a test string. this is a test string. this is a test string. this is a test string. this is a test string. this is a test string. this is a test string. this is a test string.";
+text[1] = "this is the second page";
+page = 0;
 name = "NPC";
 
 c_text = c_black;
 c_name = c_black;
 
 font = fnt_text_9;
+
+interact_key = vk_space;

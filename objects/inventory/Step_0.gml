@@ -7,7 +7,9 @@ var width_grid = ds_grid_width(inv_grid);
 
 var inst, ss_item, pp_item;
 var xx, yy, nx, ny, sx, sy;
-	
+
+var in = -1;
+
 #region Mouse Slot
 
 moused_over_slot = -1;
@@ -126,6 +128,8 @@ if (moused_over_slot != -1) {
 	} else if (ss_item != item.none) {
 		if (mouse_check_button_pressed(mb_middle)) {
 			#region Drop Moused Over Item into Game World
+			
+			in = ss_item;
 			inv_grid[# 1, moused_over_slot] -= 1;
 			
 			if (inv_grid[# 1, moused_over_slot] == 0) {
@@ -139,7 +143,11 @@ if (moused_over_slot != -1) {
 				x_frame = item_num mod (spr_width / cell_size);
 				y_frame = item_num div (spr_width / cell_size);
 				show_debug_message("Dropped the item: " + string(item_num));
-			}			
+			}		
+			
+			create_notification = true;
+			
+			
 			#endregion
 		} else if (mouse_check_button_pressed(mb_right)) {
 			#region Pickup Moused Over Item
@@ -153,8 +161,9 @@ if (moused_over_slot != -1) {
 	if (picked_slot != -1) {
 		if (mouse_check_button_pressed(mb_left) and !mouse_in_inventory) {
 			#region Drop Picked Up Item Into Game World
-			// Drop Item into Game World	
+			
 			pp_item = inv_grid[# 0, picked_slot];
+			in = pp_item;
 			inv_grid[# 1, picked_slot] -= 1;
 			
 			if (inv_grid[# 1, picked_slot] == 0) {
@@ -169,7 +178,8 @@ if (moused_over_slot != -1) {
 				x_frame = item_num mod (spr_width / cell_size);
 				y_frame = item_num div (spr_width / cell_size);
 				show_debug_message("Dropped the item: " + string(item_num));
-			}			
+			}		
+			
 			#endregion
 		} else if (mouse_check_button_pressed(mb_right)) {
 			#region Put Picked Up Item Back Into Original Slot
@@ -178,6 +188,52 @@ if (moused_over_slot != -1) {
 			
 			#endregion
 		}	
+	}
+}
+
+#endregion
+
+#region Create Notification
+
+if (in != -1) {
+	if (!instance_exists(obj_notification)) {
+		instance_create_layer(0, 0, "Instances", obj_notification);	
+	}
+			
+	with (obj_notification) {
+		if (!ds_exists(ds_notifications, ds_type_grid)) {
+			// Create Grid
+			ds_notifications = ds_grid_create(2, 1);	
+			var not_grid = ds_notifications;
+			not_grid[# 0, 0] = -1;
+			not_grid[# 1, 0] = inventory.ds_items_desc[# 0, in];
+		} else {
+			// Add to Grid
+			event_perform(ev_other, ev_user0);
+						
+			var not_grid = ds_notifications;
+			var grid_height = ds_grid_height(not_grid);
+			var name = inventory.ds_items_desc[# 0, in];
+			var in_grid = false;
+			// Check if item exists, if not resize grid, otherwise add to it
+						
+			var yy = 0;
+			repeat (grid_height) {
+				if (name == not_grid[# 1, yy]) {
+					not_grid[# 0, yy] -= 1
+					in_grid = true;
+					break
+				} 
+							
+				yy += 1;
+			}
+						
+			if (!in_grid) {
+				ds_grid_resize(not_grid, ds_grid_width(not_grid), grid_height + 1);	
+				not_grid[# 0, grid_height] = -1;
+				not_grid[# 1, grid_height] = name;
+			}						
+		}					
 	}
 }
 

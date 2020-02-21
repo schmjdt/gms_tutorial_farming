@@ -234,7 +234,7 @@
             "Key": "2f14ec6b-3359-4739-902e-3249af81726d",
             "Value": {
                 "id": "ba18bfad-dd16-4776-8912-d2aff7124928",
-                "resourcePath": "fonts\\fnt_text_24\\fnt_text_24.yy",
+                "resourcePath": "fonts\\fnt_text_14\\fnt_text_14.yy",
                 "resourceType": "GMFont"
             }
         },
@@ -898,7 +898,7 @@
             "Key": "fcc12f36-bc30-4853-b94c-2ebcbf178dff",
             "Value": {
                 "id": "ab6b68bd-93aa-4148-9ea3-24b03352edb8",
-                "resourcePath": "fonts\\fnt_text_12\\fnt_text_12.yy",
+                "resourcePath": "fonts\\fnt_text_9\\fnt_text_9.yy",
                 "resourceType": "GMFont"
             }
         },

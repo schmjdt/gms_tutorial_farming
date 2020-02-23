@@ -13,5 +13,5 @@ name  = "Anna";
 voice = snd_voice2;
 portrait_index = 2;
 
-text = ["..."];
-speakers = [id];
+text = ["Hello, my name is " + name, "Nice day for farming, isn't it?"];
+speakers = [id, id];

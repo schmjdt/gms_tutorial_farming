@@ -31,6 +31,7 @@ name_y = namebox_y + (namebox_height / 2);
 
 
 text[0] = "";
+speakers[0] = 0;
 page = 0;
 counter = 0;
 pause_text = false;
@@ -47,4 +48,3 @@ font = fnt_text_9;
 interact_key = vk_space;
 
 draw_set_font(font);
-event_perform(ev_other, ev_user1);

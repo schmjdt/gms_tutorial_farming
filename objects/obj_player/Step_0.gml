@@ -9,6 +9,7 @@ input_up	= keyboard_check(vk_up);
 input_down	= keyboard_check(vk_down);
 input_slow  = keyboard_check(vk_control);
 input_fast  = keyboard_check(vk_shift);
+input_interact = keyboard_check_pressed(ord("E"));
 
 // --- ALTER SPEED
 if (input_slow or input_fast) {
@@ -87,6 +88,20 @@ if (inst != noone and facing == inst.player_facing_before) {
 			spawn_y = inst.target_y;
 			spawn_player_facing = inst.player_facing_after;
 			do_transition = true;
+		}
+	}
+}
+
+// -	TEXTBOX
+if (input_interact) {
+	var _radius = 16;
+	
+	// TODO: make it so the collision rectangle is only in front of player and rotates around
+	var _inst = collision_rectangle(x - _radius, y - _radius, x + _radius, y + _radius, par_npc, false, true);
+	
+	if (_inst != noone) {
+		with (_inst) {
+			create_textbox(text, speakers);
 		}
 	}
 }

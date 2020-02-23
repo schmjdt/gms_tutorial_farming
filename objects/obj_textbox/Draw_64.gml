@@ -52,26 +52,40 @@ draw_set_valign(fa_top);
 
 #region Draw Text
 
-if (!pause_text and counter < str_len) {
-	// Speed of typewriter effect
-	counter += 1;
+// TODO: plan to allow for NPC's to have array of text as well to randomize what they say
+if (!is_array(text[page])) {
+	if (!pause_text and counter < str_len) {
+		// Speed of typewriter effect
+		counter += 1;
 	
-	if (counter mod 4 == 0) {
-		audio_play_sound(voice, 10, false);
+		if (counter mod 4 == 0) {
+			audio_play_sound(voice, 10, false);
+		}
+	
+		switch(string_char_at(text_wrapped, counter)) {
+			case ",": pause_text = true; alarm[1] = 15; break;
+			case ".":
+			case "?":
+			case "!": pause_text = true; alarm[1] = 25; break;
+		}
 	}
+
+	var substr = string_copy(text_wrapped, 1, counter);
+
+	c = c_text;
+	draw_text_color(text_x, text_y, substr, c, c, c, c, 1);
+} else {
+	// Player Choice
+	c = c_text;
 	
-	switch(string_char_at(text_wrapped, counter)) {
-		case ",": pause_text = true; alarm[1] = 15; break;
-		case ".":
-		case "?":
-		case "!": pause_text = true; alarm[1] = 25; break;
+	var i = 0, yy = 0;	
+	repeat (text_array_length) {
+		draw_text_ext_color(text_x, text_y + yy, text_array[i], text_height, text_max_width, c, c, c, c, 1);
+		
+		yy += string_height_ext(text_array[i], text_height, text_max_width);
+		i += 1;
 	}
 }
-
-var substr = string_copy(text_wrapped, 1, counter);
-
-c = c_text;
-draw_text_color(text_x, text_y, substr, c, c, c, c, 1);
 
 #endregion
 

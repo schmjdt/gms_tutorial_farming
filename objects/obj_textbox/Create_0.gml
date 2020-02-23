@@ -48,3 +48,4 @@ font = fnt_text_9;
 interact_key = vk_space;
 
 draw_set_font(font);
+text_height = string_height("M");

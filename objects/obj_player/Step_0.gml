@@ -103,6 +103,9 @@ if (input_interact) {
 		if (_inst != noone) {
 			with (_inst) {
 				var _tbox = create_textbox(text, speakers);
+				can_move = false;
+				moveX = 0;
+				moveY = 0;
 			}
 		
 			active_textbox = _tbox;

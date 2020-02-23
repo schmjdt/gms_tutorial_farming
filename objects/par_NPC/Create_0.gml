@@ -22,6 +22,7 @@ y_frame = 10;
 
 moveX = 0;
 moveY = 0;
+can_move = true;
 
 // NOTE: mask defaulted to human npc
 x_offset = sprite_get_xoffset(mask_index)

@@ -1,5 +1,7 @@
 /// @description movement
 
+if (!can_move) exit;
+
 // INPUT -> INTENDED MOVEMENT -> (FUTURE) COLLISION CHECK -> APPLY MOVEMENT
 
 // --- COLLISION CHECK

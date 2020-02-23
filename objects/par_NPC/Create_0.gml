@@ -38,3 +38,11 @@ spr_hair	= -1;
 
 // Start NPC movement right away after creation
 alarm[1] = 1;
+
+// Dialogue
+name  = "Unknown";
+voice = snd_voice1;
+portrait_index = 0;
+
+text = ["..."];
+speakers = [id];

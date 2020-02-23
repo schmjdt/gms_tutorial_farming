@@ -29,16 +29,15 @@ text_y = box_y + y_buffer;
 name_x = namebox_x + (namebox_width  / 2);
 name_y = namebox_y + (namebox_height / 2);
 
-portrait_index = 0;
 
-text[0] = "this is a test string. this is a test string this is a test string this is a test string! this is a test string this is a test string, this is a test string. this is a test string.";
-text[1] = "this is the second page";
+text[0] = "";
 page = 0;
 counter = 0;
 pause_text = false;
 
 name  = "NPC";
 voice = snd_voice1;
+portrait_index = 0;
 
 c_text = c_black;
 c_name = c_black;

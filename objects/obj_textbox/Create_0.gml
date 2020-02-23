@@ -38,6 +38,7 @@ pause_text = false;
 
 choice_selection = 0;
 choice_color = c_white;
+choice_dialogue = false;
 
 name  = "NPC";
 voice = snd_voice1;

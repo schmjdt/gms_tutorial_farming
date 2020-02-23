@@ -53,7 +53,7 @@ draw_set_valign(fa_top);
 #region Draw Text
 
 // TODO: plan to allow for NPC's to have array of text as well to randomize what they say
-if (!is_array(text[page])) {
+if (!choice_dialogue) {
 	if (!pause_text and counter < str_len) {
 		// Speed of typewriter effect
 		counter += 1;

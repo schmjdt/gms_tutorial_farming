@@ -94,14 +94,22 @@ if (inst != noone and facing == inst.player_facing_before) {
 
 // -	TEXTBOX
 if (input_interact) {
-	var _radius = 16;
+	if (active_textbox == noone) {
+		var _radius = 16;
 	
-	// TODO: make it so the collision rectangle is only in front of player and rotates around
-	var _inst = collision_rectangle(x - _radius, y - _radius, x + _radius, y + _radius, par_npc, false, true);
+		// TODO: make it so the collision rectangle is only in front of player and rotates around
+		var _inst = collision_rectangle(x - _radius, y - _radius, x + _radius, y + _radius, par_npc, false, true);
 	
-	if (_inst != noone) {
-		with (_inst) {
-			create_textbox(text, speakers);
+		if (_inst != noone) {
+			with (_inst) {
+				var _tbox = create_textbox(text, speakers);
+			}
+		
+			active_textbox = _tbox;
+		}
+	} else {
+		if (!instance_exists(active_textbox)) {
+			active_textbox = noone;
 		}
 	}
 }

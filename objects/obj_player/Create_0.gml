@@ -39,3 +39,4 @@ spr_hair	= spr_hair_male_messy_raven
 name  = "Player";
 voice = snd_voice1;
 portrait_index = 7;
+active_textbox = noone;

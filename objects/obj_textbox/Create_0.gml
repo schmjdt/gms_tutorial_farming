@@ -36,6 +36,9 @@ page = 0;
 counter = 0;
 pause_text = false;
 
+choice_selection = 0;
+choice_color = c_white;
+
 name  = "NPC";
 voice = snd_voice1;
 portrait_index = 0;

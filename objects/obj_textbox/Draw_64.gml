@@ -80,6 +80,13 @@ if (!is_array(text[page])) {
 	
 	var i = 0, yy = 0;	
 	repeat (text_array_length) {
+		if (choice_selection == i) {
+			c = choice_color;
+			draw_text_color(text_x - 7, text_y + yy, ">", c, c, c, c, 1);
+		} else {
+			c = c_text;
+		}
+		
 		draw_text_ext_color(text_x, text_y + yy, text_array[i], text_height, text_max_width, c, c, c, c, 1);
 		
 		yy += string_height_ext(text_array[i], text_height, text_max_width);

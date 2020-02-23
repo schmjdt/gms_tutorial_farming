@@ -12,6 +12,3 @@ spr_hair	= spr_hair_male_bedhead_pink
 name  = "Billy";
 voice = snd_voice3;
 portrait_index = 5;
-
-text = ["..."];
-speakers = [id];

@@ -13,6 +13,11 @@ name  = "Cathy";
 voice = snd_voice2;
 portrait_index = 4;
 
+enum Dialogue {
+	quit = -2,
+	next = -1
+}
+
 text = [
 	"Hey, what's your name?",
 	[
@@ -21,7 +26,9 @@ text = [
 		"Wouldn't you like to know!",
 		"I'm not supposed to talk to strangers."
 	],
-	"Right..."
+	"Right...",
+	"Wow, what a coincidence."
 ];
 
-speakers = [id, obj_player, id];
+speakers = [id, obj_player, id, id, id];
+next_line = [Dialogue.next, [2, 3, 2, 2], Dialogue.quit, Dialogue.quit];

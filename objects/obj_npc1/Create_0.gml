@@ -15,3 +15,4 @@ portrait_index = 2;
 
 text = ["Hello, my name is " + name, "Nice day for farming, isn't it?"];
 speakers = [id, id];
+next_line = [Dialogue.next, Dialogue.quit];

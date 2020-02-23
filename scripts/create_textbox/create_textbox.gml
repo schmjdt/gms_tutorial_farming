@@ -1,12 +1,14 @@
 /// @desc create_textbox
 /// @arg text
 /// @arg speakers
+/// @arg next_line
 
 var _inst = instance_create_layer(0, 0, "Text", obj_textbox);
 
 with (_inst) {
-	text = argument[0];
-	speakers = argument[1];
+	text	  = argument[0];
+	speakers  = argument[1];
+	next_line = argument[2];
 	
 	var _len = array_length_1d(text);
 	

@@ -36,6 +36,10 @@ page = 0;
 counter = 0;
 pause_text = false;
 
+choice_selection = 0;
+choice_color = c_white;
+choice_dialogue = false;
+
 name  = "NPC";
 voice = snd_voice1;
 portrait_index = 0;
@@ -48,3 +52,4 @@ font = fnt_text_9;
 interact_key = vk_space;
 
 draw_set_font(font);
+text_height = string_height("M");

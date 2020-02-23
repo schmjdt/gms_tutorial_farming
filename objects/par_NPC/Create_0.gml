@@ -22,6 +22,7 @@ y_frame = 10;
 
 moveX = 0;
 moveY = 0;
+can_move = true;
 
 // NOTE: mask defaulted to human npc
 x_offset = sprite_get_xoffset(mask_index)
@@ -38,3 +39,11 @@ spr_hair	= -1;
 
 // Start NPC movement right away after creation
 alarm[1] = 1;
+
+// Dialogue
+name  = "Unknown";
+voice = snd_voice1;
+portrait_index = 0;
+
+text = ["..."];
+speakers = [id];

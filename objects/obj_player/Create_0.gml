@@ -33,3 +33,10 @@ spr_feet	= spr_feet_male_boots_black
 spr_torso	= spr_torso_male_shirt_white
 spr_legs	= spr_legs_male_pants_teal
 spr_hair	= spr_hair_male_messy_raven
+
+
+// Dialogue
+name  = "Player";
+voice = snd_voice1;
+portrait_index = 7;
+active_textbox = noone;

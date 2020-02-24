@@ -1,9 +1,19 @@
 /// @description Use script
 
-if (scripts == -1 or scripts[page] == -1) exit;
+// Just -1         -1
+// Array		   [script, arg0, arg1...]
+// Array of Arrays [[script, arg0, arg1...]]
+// Array of -1     [-1]
 
-// [script, arg0, arg1...]
+// TODO: Add capability of executing multiple scripts or use wrapper script
+
+if (scripts == -1) exit;
+
 var _script = scripts[page];
+
+if (choice_dialogue) _script = _script[choice_selection];
+
+if (_script == -1) exit;
 
 var _len = array_length_1d(scripts);
 

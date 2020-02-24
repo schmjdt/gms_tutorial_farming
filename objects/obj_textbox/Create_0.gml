@@ -32,6 +32,7 @@ name_y = namebox_y + (namebox_height / 2);
 
 text[0] = "";
 speakers[0] = 0;
+scripts[0] = -1;
 page = 0;
 counter = 0;
 pause_text = false;

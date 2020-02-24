@@ -48,3 +48,4 @@ portrait_index = 0;
 text = ["..."];
 speakers = [id];
 next_line = [Dialogue.next];
+scripts = -1;

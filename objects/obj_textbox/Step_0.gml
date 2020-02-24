@@ -4,6 +4,8 @@ if (keyboard_check_pressed(interact_key)) {
 	if (!choice_dialogue and counter < str_len) {
 		counter = str_len;
 	} else if (page < array_length_1d(text) - 1) {
+		event_perform(ev_other, ev_user2);
+		
 		var line = next_line[page];
 		
 		if (choice_dialogue) {

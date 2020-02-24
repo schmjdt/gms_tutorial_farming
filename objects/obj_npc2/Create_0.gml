@@ -32,3 +32,12 @@ text = [
 
 speakers = [id, obj_player, id, id, id];
 next_line = [Dialogue.next, [2, 3, 2, 2], Dialogue.quit, Dialogue.quit];
+scripts = [
+	[change_variable, id, "spr_torso", spr_torso_female_sleeveless_white],
+	[
+		[change_variable, id, "spr_hair", spr_hair_female_ponytail_raven],
+		[change_variable, id, "spr_torso", spr_torso_female_sleeveless_red],
+		-1,-1
+	], 
+	-1, -1
+];
